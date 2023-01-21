@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+:root {
+    --color-primary: #388FA3;
+    --color-grey: #D9D9D9;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+/* body {
+    padding: 0 15vw;
+} */
+
+.global-padding {
+    padding: 0 15vw;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3vw;
+    font-weight: 300;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7vw;
+    font-weight: 200;
+}
+
+p {
+    font-weight: 200;
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    margin-top: 2vw;
+}
+
+.header .row-image img {
+    width: 7vw;
+}
+
+.header .row-content {
+    padding: 2vw;
+}
+
+.header h1 {
+    font-weight: 100;
+    font-size: 3.3vw;
+    letter-spacing: 0.24vw;
+}
+
+.header .menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .menu .item a {
+    cursor: pointer;
+    font-weight: 200;
+    font-size: 1vw;
+    color: black;
+    transition: 500ms ease;
+    padding-top: 1vw;
+}
+
+.header .menu .item a:hover {
+    color: var(--color-primary);
+}
+
+
+/* ACADEMIC LEADER */
+.leader {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2.5vw;
+}
+
+.leader img {
+    width: 20vw;
+}
+
+.leader .content {
+    margin-left: 2vw;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.leader .content p {
+    font-size: 1vw;
+}
+
+.leader .content h3 {
+    margin-top: 1vw;
+    font-size: 1.3vw;
+}
+
+
+
+/* PROGRAM */
+.program {
+    margin-top: 5vw;
+}
+
+.program .title {
+    margin-bottom: 2vw;
+}
+
+.program .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.program .content .card {
+    cursor: pointer;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.program .content .card img {
+    width: 20vw;
+}
+
+.program .content .card .card-text {
+    background-color: var(--color-primary);
+    text-align: center;
+    padding: 1vw 0;
+}
+
+.program .content .card .card-text a{
+    margin: 0 auto;
+    color: white;
+}
+
+
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    background-color: var(--color-primary);
+    margin-top: 8vw;
+    color: white;
+}
+
+.footer .container {
+    padding: 5vw 15vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer .container .nav {
+    width: 20vw;
+}
+
+.footer .container .nav .title h3 {
+    font-weight: 200;
+}
+
+.footer .container .nav .menu {
+    list-style-type: none;
+    margin-top: 2vw;
+}
+
+.footer .container .nav .menu .item {
+    padding: 0.5vw;
+}
+
+.footer .container .nav .menu .item a {
+    font-weight: 200;
+    color: white;
+    font-size: 1vw;
+}
+
+.footer .container .account {
+    margin-left: 0vw;
+    width: 20vw;
+}
+
+.footer .container .account .title {
+    margin-bottom: 2vw;
+}
+
+.footer .container .account .each-account {
+    padding: 0.5vw;
+}
+
+.footer .container .account .each-account img {
+    width: 1.5vw;
+}
+
+.footer .container .account .each-account a {
+    color: white;
+    cursor: pointer;
+    font-size: 1.2vw;
+    padding-left: 1vw;
+}
+
+.footer .container .address {
+    margin-left: 0vw;
+}
+
+.footer .container .address .title {
+    margin-bottom: 2vw;
+}
+
+.footer .container .address .text-address {
+    font-size: 1.2vw;
+    margin-bottom: 1vw;
+}
+
+.footer .container .address .text-email {
+    font-size: 1.2vw;
+}
+
+.footer .container .address .text-phone {
+    font-size: 1.2vw;
+}

@@ -62,7 +62,7 @@ p{
     display: flex;
     justify-content: space-between;
 }
-.header .menu .item{
+.header .menu .item a{
     cursor: pointer;
     font-weight: 200;
     font-size: 1vw;
@@ -70,7 +70,7 @@ p{
     transition: 500ms ease;
     padding-top: 1vw;
 }
-.header .menu .item:hover {
+.header .menu .item a:hover {
     color: var(--color-primary);
 }
 
