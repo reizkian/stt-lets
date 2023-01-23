@@ -10,10 +10,11 @@
   <link href="../css/sidebar.css" rel="stylesheet">
   <link href="../view/home/home.css" rel="stylesheet">
   <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link href="../css/sidebar.css" rel="stylesheet">
-  <link href="../view/home/home.css" rel="stylesheet">
+  <link href="../view/information/information.css" rel="stylesheet">
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 </head>
 
 <body>
@@ -29,14 +30,14 @@
       <span class="title fs-5">STT LETS</span>
     </a>
     <hr>
-    <ul class="nav nav-pills flex-column mb-auto" >
+    <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="./home" class="nav-link active" style="background-color: #388FA3;">
+        <a href="./home" class="nav-link link-dark">
           Home
         </a>
       </li>
       <li>
-        <a href="./information" class="nav-link link-dark">
+        <a href="./information" class="nav-link active" style="background-color: #388FA3;">
           Information
         </a>
       </li>
@@ -58,8 +59,7 @@
     </ul>
     <hr>
     <div class="dropdown">
-      <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
-        data-bs-toggle="dropdown" aria-expanded="false">
+      <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
         <img src="../../../img/user0.png" alt="" width="32" height="32" class="rounded-circle me-2">
         <strong>web admin</strong>
       </a>
@@ -76,56 +76,52 @@
   </aside>
 
   <main>
-    <h1 class="nav-title">Home</h1>
-    <p class="nav-subtitle">#beranda</p>
+    <h1 class="nav-title">Information</h1>
+    <p class="nav-subtitle">#informasi</p>
     <hr width="100%">
 
     <div class="content">
-      <div class="banner">
-        <p><span>#banner1.png</span> image size 1187x516 px</p>
-        <img src="../../../img/banner0.png" alt="">
-        <form action="./home/upload_image.php?file_name=banner1.png" method="post" enctype="multipart/form-data">
-          Select image to upload banner0.png
-          <input type="file" name="fileToUpload" id="fileToUpload">
-          <input type="submit" value="Upload Image" name="submit">
+      <div class="add">
+        <form action="./information/create_information.php" method="POST" name="form">
+          <label for="author">Author</label>
+          <input type="text" name="author" id="author" required>
+          <label for="title">Title</label>
+          <input type="text" name="title" id="title" required>
+          <label for="content">Content</label>
+          <textarea name="content" id="content" rows="7" required></textarea>
+          <label for="created">Created</label>
+          <input class="date" type="text" id="created" name="created" required>
+          <button onclick="save()" type="submit">save</button>
         </form>
-        <hr>
-        <p><span>#banner2.png</span> image size 1187x516 px</p>
-        <img src="../../../img/banner1.png" alt="">
-        <form action="./home/upload_image.php?file_name=banner2.png" method="post" enctype="multipart/form-data">
-          Select image to upload banner1.png
-          <input type="file" name="fileToUpload" id="fileToUpload">
-          <input type="submit" value="Upload Image" name="submit">
-        </form>
-        <hr>
-        <p><span>#banner3.png</span> image size 1187x516 px</p>
-        <img src="../../../img/banner2.png" alt="">
-        <form action="./home/upload_image.php?file_name=banner3.png" method="post" enctype="multipart/form-data">
-          Select image to upload banner2.png
-          <input type="file" name="fileToUpload" id="fileToUpload">
-          <input type="submit" value="Upload Image" name="submit">
-        </form>
-        <hr>
-        <p><span>#education0.png</span> image size 507x293 px</p>
-        <img src="../../../img/education0.png" alt="">
-        <form action="./home/upload_image.php?file_name=education0.png" method="post" enctype="multipart/form-data">
-          Select image to upload education0.png
-          <input type="file" name="fileToUpload" id="fileToUpload">
-          <input type="submit" value="Upload Image" name="submit">
-        </form>
-        <hr>
-      </div>
-      <div class="education-text">
-        <p><span>#EducationText</span> varchar(1000)</p>
-        <?php include './read_education.php';?>
       </div>
     </div>
+
+
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   <script src="../js/sidebar.js"></script>
+
+  <script>
+    function save(){
+      const author= document.getElementById("author").value;
+      const title= document.getElementById("title").value;
+      const content= document.getElementById("content").value;
+      const created=document.getElementById("created").value;
+      
+      document.getElementById("content").innerText(content.replace(/(?:\r\n|\r|\n)/g, '\\n'))
+      // $.ajax({
+      //   type: "POST",
+      //   url: "./information/create_information.php",
+      //   data: {
+      //     author: author,
+      //     title: title,
+      //     content: content,
+      //     created: created,
+      //   }
+      // });
+    }
+  </script>
 </body>
 
 </html>

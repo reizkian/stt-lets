@@ -1,0 +1,50 @@
+:root {
+    --color-primary: #388FA3;
+    --color-grey: #D9D9D9;
+}
+main{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+}
+
+main .nav-title{
+    font-size: 1.5rem;
+    padding-bottom: 0;
+    margin-bottom: -0.1rem;
+}
+
+main .nav-subtitle{
+    font-size: 0.7rem;
+    font-weight: 200;
+}
+
+main hr{
+    margin-top: -0.8rem;
+}
+
+span{
+    font-weight: 400;
+    color: var(--color-primary);
+}
+
+main .content .add form{
+    display: flex;
+    flex-direction: column;
+}
+
+main .content .add form{
+    display: flex;
+    flex-direction: column;
+}
+
+main .content .add form button{
+    margin-top: 1rem;
+    width: 150px;
+}
+
+main .content .add form .date {
+    width: 150px;
+  }

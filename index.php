@@ -52,17 +52,17 @@
 
             <div class="mySlides fade">
                 <div class="numbertext">1 / 3</div>
-                <img src="./img/banner0.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">2 / 3</div>
                 <img src="./img/banner1.png" style="width:100%">
             </div>
 
             <div class="mySlides fade">
-                <div class="numbertext">3 / 3</div>
+                <div class="numbertext">2 / 3</div>
                 <img src="./img/banner2.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="./img/banner3.png" style="width:100%">
             </div>
 
             <a class="prev" onclick="plusSlides(-1)">❮</a>
