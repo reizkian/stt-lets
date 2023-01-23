@@ -86,12 +86,12 @@
             $sql = "SELECT * FROM information WHERE id=$id";
             $result = $connection->query($sql);
             while ($row = $result->fetch_assoc()) {
-                echo "<form action='./home/upload_image.php?file_name=banner1.png' method='POST' enctype='multipart/form-data'>";
+                echo "<img src='../../img/news/" . $row['file_name'] ."' alt=''/>";
+                echo "<form action='./update_image.php?id=".$row['id']."' method='POST' enctype='multipart/form-data'>";
                 echo "Select image to upload";
                 echo "<input class='button-choose' type='file' name='fileToUpload' id='fileToUpload'>";
                 echo "<input class='button-upload' type='submit' value='Upload Image' name='submit'>";
                 echo "</form>";
-                echo "<img src='../../img/news/" . $row['image'] ." alt=''/>";
                 
                 echo "<div class='add'>";
                 echo "<form action='./update_information.php?id=".$row['id']."' method='POST' name='form'>";
