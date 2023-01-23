@@ -7,8 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Admin STT LETS</title>
-  <link href="../css/sidebar.css" rel="stylesheet">
-  <link href="../view/home/home.css" rel="stylesheet">
   <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link href="../css/sidebar.css" rel="stylesheet">
@@ -80,48 +78,29 @@
     <p class="nav-subtitle">#informasi</p>
     <hr width="100%">
 
-    <div class="content">
-      <div class="add">
-        <form action="./information/create_information.php" method="POST" name="form">
-          <label for="author">Author</label>
-          <input type="text" name="author" id="author" required>
-          <label for="title">Title</label>
-          <input type="text" name="title" id="title" required>
-          <label for="content">Content</label>
-          <textarea name="content" id="content" rows="7" required></textarea>
-          <label for="created">Created</label>
-          <input class="date" type="text" id="created" name="created" required>
-          <button onclick="save()" type="submit">save</button>
-        </form>
-      </div>
+    <div class="add">
+      <form action="./information/create_information.php" method="POST" name="form">
+        <label for="author">Author</label>
+        <input type="text" name="author" id="author" required>
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" required>
+        <label for="content">Content</label>
+        <textarea name="content" id="content" rows="7" required></textarea>
+        <label for="created">Created</label>
+        <input class="date" type="text" id="created" name="created" required>
+        <button type="submit">save</button>
+      </form>
     </div>
 
-
+    <div class="content">
+      <?php
+        include './read_information.php';
+      ?>
+    </div>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   <script src="../js/sidebar.js"></script>
-
-  <script>
-    function save(){
-      const author= document.getElementById("author").value;
-      const title= document.getElementById("title").value;
-      const content= document.getElementById("content").value;
-      const created=document.getElementById("created").value;
-      
-      document.getElementById("content").innerText(content.replace(/(?:\r\n|\r|\n)/g, '\\n'))
-      // $.ajax({
-      //   type: "POST",
-      //   url: "./information/create_information.php",
-      //   data: {
-      //     author: author,
-      //     title: title,
-      //     content: content,
-      //     created: created,
-      //   }
-      // });
-    }
-  </script>
 </body>
 
 </html>

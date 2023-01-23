@@ -78,30 +78,30 @@
   <main>
     <h1 class="nav-title">Home</h1>
     <p class="nav-subtitle">#beranda</p>
-    <hr width="100%">
+    <hr class="hr" width="100%">
 
     <div class="content">
       <div class="banner">
         <p><span>#banner1.png</span> image size 1187x516 px</p>
-        <img src="../../../img/banner0.png" alt="">
-        <form action="./home/upload_image.php?file_name=banner1.png" method="post" enctype="multipart/form-data">
-          Select image to upload banner0.png
-          <input type="file" name="fileToUpload" id="fileToUpload">
-          <input type="submit" value="Upload Image" name="submit">
-        </form>
-        <hr>
-        <p><span>#banner2.png</span> image size 1187x516 px</p>
         <img src="../../../img/banner1.png" alt="">
-        <form action="./home/upload_image.php?file_name=banner2.png" method="post" enctype="multipart/form-data">
+        <form action="./home/upload_image.php?file_name=banner1.png" method="post" enctype="multipart/form-data">
           Select image to upload banner1.png
           <input type="file" name="fileToUpload" id="fileToUpload">
           <input type="submit" value="Upload Image" name="submit">
         </form>
         <hr>
-        <p><span>#banner3.png</span> image size 1187x516 px</p>
+        <p><span>#banner2.png</span> image size 1187x516 px</p>
         <img src="../../../img/banner2.png" alt="">
-        <form action="./home/upload_image.php?file_name=banner3.png" method="post" enctype="multipart/form-data">
+        <form action="./home/upload_image.php?file_name=banner2.png" method="post" enctype="multipart/form-data">
           Select image to upload banner2.png
+          <input type="file" name="fileToUpload" id="fileToUpload">
+          <input type="submit" value="Upload Image" name="submit">
+        </form>
+        <hr>
+        <p><span>#banner3.png</span> image size 1187x516 px</p>
+        <img src="../../../img/banner3.png" alt="">
+        <form action="./home/upload_image.php?file_name=banner3.png" method="post" enctype="multipart/form-data">
+          Select image to upload banner3.png
           <input type="file" name="fileToUpload" id="fileToUpload">
           <input type="submit" value="Upload Image" name="submit">
         </form>

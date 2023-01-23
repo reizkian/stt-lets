@@ -21,7 +21,7 @@ main .nav-subtitle{
     font-weight: 200;
 }
 
-main hr{
+main .hr{
     margin-top: -0.8rem;
 }
 
@@ -30,21 +30,44 @@ span{
     color: var(--color-primary);
 }
 
-main .content .add form{
+main .add form{
     display: flex;
     flex-direction: column;
 }
 
-main .content .add form{
+main .add form{
     display: flex;
     flex-direction: column;
+    margin-bottom: 2rem;
 }
 
-main .content .add form button{
+main .add form button{
     margin-top: 1rem;
     width: 150px;
 }
 
-main .content .add form .date {
+main .add form .date {
     width: 150px;
-  }
+}
+
+main .add .button-upload{
+    width: 150px;
+}
+
+main .content .news{
+    display: flex;
+    flex-direction: row;
+}
+
+main .content .news img{
+    width: 30%;
+}
+
+main .content .news .text{
+    padding-left: 2rem;
+}
+
+main .content .news .text .date{
+    font-weight: 200;
+    color: black;
+}
