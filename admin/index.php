@@ -16,7 +16,7 @@
 
 <body class="text-center">
     <main class="form-signin w-100 m-auto">
-        <form method="POST" action="./admin/home.php">
+        <form method="POST" action="./admin/login.php">
             <img class="mb-4" src="../img/logo_stt_lets.png" alt="" width="120" height="150">
 
             <div class="form-floating">
