@@ -69,7 +69,7 @@
         <hr class="hr" width="100%">
 
             <?php
-            include '/new/admin/db.php';
+            include '../../admin/db.php';
 
             $id = $_GET["id"];
             $sql = "SELECT * FROM staff WHERE id=$id";

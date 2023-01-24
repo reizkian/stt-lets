@@ -68,7 +68,7 @@
         <p class="nav-subtitle">#informasi</p>
         <hr width="100%">
             <?php
-            include '/new/admin/db.php';
+            include '../../db.php';
 
             $id = $_GET["id"];
             $sql = "SELECT * FROM information WHERE id=$id";
