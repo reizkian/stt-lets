@@ -25,7 +25,7 @@
   </svg>
 
   <aside class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 200px; height: 100vh;">
-    <a href="./home.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+    <a href="/admin/view/home" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
       <span class="title fs-5">STT LETS</span>
     </a>
     <hr>
