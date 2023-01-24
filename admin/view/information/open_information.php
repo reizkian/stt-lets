@@ -68,13 +68,13 @@
         <p class="nav-subtitle">#informasi</p>
         <hr width="100%">
             <?php
-            include '../../db.php';
+            include '/new/admin/db.php';
 
             $id = $_GET["id"];
             $sql = "SELECT * FROM information WHERE id=$id";
             $result = $connection->query($sql);
             while ($row = $result->fetch_assoc()) {
-                echo "<img src='../../../img/news/" . $row['file_name'] ."' alt=''style='margin-bottom:2rem;'/>";
+                echo "<img src='/new/img/news/" . $row['file_name'] ."' alt=''style='margin-bottom:2rem;'/>";
                 echo "<form action='/new/admin/view/information/update_image.php?id=".$row['id']."' method='POST' enctype='multipart/form-data'>";
                 echo "Select image to upload (recomended size: 900x600px)";
                 echo "<span>".$row['file_name']."</span>";
