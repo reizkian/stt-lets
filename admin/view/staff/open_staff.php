@@ -74,9 +74,12 @@
             $id = $_GET["id"];
             $sql = "SELECT * FROM staff WHERE id=$id";
             $result = $connection->query($sql);
-
+            
+            echo $id;
             if($connection){
                 echo "connected to database";
+            }else{
+                echo "connection failed";
             }
 
             while ($row = $result->fetch_assoc()) {
