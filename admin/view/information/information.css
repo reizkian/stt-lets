@@ -71,3 +71,20 @@ main .content .news .text .date{
     font-weight: 200;
     color: black;
 }
+
+main .content .update{
+    text-decoration: none;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+main .content .delete{
+    text-decoration: none;
+    background-color: crimson;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    margin-left: 1rem;
+}

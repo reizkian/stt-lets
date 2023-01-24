@@ -77,8 +77,6 @@
         <h1 class="nav-title">Information</h1>
         <p class="nav-subtitle">#informasi</p>
         <hr width="100%">
-
-        
             <?php
             include '../../db.php';
 
@@ -86,9 +84,9 @@
             $sql = "SELECT * FROM information WHERE id=$id";
             $result = $connection->query($sql);
             while ($row = $result->fetch_assoc()) {
-                echo "<img src='../../img/news/" . $row['file_name'] ."' alt=''/>";
+                echo "<img src='../../../img/news/" . $row['file_name'] ."' alt=''style='margin-bottom:2rem;'/>";
                 echo "<form action='./update_image.php?id=".$row['id']."' method='POST' enctype='multipart/form-data'>";
-                echo "Select image to upload";
+                echo "Select image to upload (recomended size: 900x600px) ";
                 echo "<input class='button-choose' type='file' name='fileToUpload' id='fileToUpload'>";
                 echo "<input class='button-upload' type='submit' value='Upload Image' name='submit'>";
                 echo "</form>";
@@ -114,6 +112,7 @@
                 echo "</div>";
             }
             $connection->close();
+
             ?>
         </div>
     </main>

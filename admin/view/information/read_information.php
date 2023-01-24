@@ -28,9 +28,10 @@ while($row = $result->fetch_assoc()){
     echo "<div class='text'>";
     echo "<h1>" . $row['title'] . "</h1>";
     echo "<span>" . $row['author'] . "</span>";
-    echo "<span class='date'> " . $row['id'] . "#" . $row['created'] . "</span>";
+    echo "<span class='date'> #" . $row['created'] . "</span>";
     echo "<p>" . str_trim($row['content'],$trim_char) . "</p>";
-    echo "<a class=''btn btn-primary href='./information/open_information.php?id=" . $row['id'] . "'role='button'>update</a>";
+    echo "<a class='update' btn btn-primary href='./information/open_information.php?id=" . $row['id'] . "'role='button'>update</a>";
+    echo "<a class='delete' btn btn-primary href='./information/delete_information.php?id=" . $row['id'] . "'role='button'>delete</a>";
     echo "</div>";
     echo "</div>";
 }
