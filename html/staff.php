@@ -8,14 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- css -->
-    <link rel="stylesheet" href="../css/kontak.css">
+    <link rel="stylesheet" href="../css/staff.css">
     <!-- fonst -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
     <!-- icon -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>STT LETS</title>
 </head>
 
@@ -50,38 +47,46 @@
             </tr>
         </table>
 
-        <!-- MAPS -->
-        <div class="mapouter">
-            <div class="gmap_canvas"><iframe width="100%" height="600" id="gmap_canvas"
-                    src="https://maps.google.com/maps?q=STT%20LETS%20(Lighthouse%20Equipping%20Theological%20School)&t=&z=11&ie=UTF8&iwloc=&output=embed"
-                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
-                    href="https://www.embedgooglemap.net/blog/divi-discount-code-elegant-themes-coupon/">divi
-                    discount</a><br>
-                <style>
-                    .mapouter {
-                        margin-top: 2.5vw;
-                        position: relative;
-                        text-align: right;
-                        height: 600px;
-                        width: 100%;
-                    }
-                </style><a href="https://www.embedgooglemap.net">embed google map without api key</a>
-                <style>
-                    .gmap_canvas {
-                        overflow: hidden;
-                        background: none !important;
-                        height: 600px;
-                        width: 100%;
-                    }
-                </style>
-            </div>
-        </div>
+        <!-- PROFESSOR -->
+        <div class="professor">
+            <?php
+            include '../php/db.php';
 
-        <div class="map-address">
-            <h3>Gedung Rhema Lt.2</h3>
-            <p>Komp. Duta Permai Blok F1-20 Jl. KH Noer Ali (d/h)</p>
-            <p>Jl. Raya Kalimalang, Jaka Sempurna, Bekasi</p>
-            <p>Telp: 021-89453029 (Office)</p>
+            $sql = "SELECT * FROM staff ORDER BY data_order";
+            $result = $connection->query($sql);
+            while ($row = $result->fetch_assoc()) {
+                echo "<div class='card'>";
+                    echo "<img src='../img/staff/" . $row['file_name'] . "' alt=''>";
+                    echo "<div class='text'>";
+                        echo "<h3>" . $row['staff_name'] . "</h3>";
+                        echo "<p>" . $row['staff_role'] . "</p>";
+                        echo "<p>" . $row['email'] . "</p>";
+                        echo "<p class='subject'>Mata Kuliah</p>";
+                        echo "<p class='staff-subject'>" . $row['staff_subject'] . "</p>";
+                    echo "</div>";
+                echo "</div>";
+            }
+            ?>
+            <!-- <div class="card">
+                    <img src="../img/user0.png" alt="">
+                    <h3>Dosen Satu</h3>
+                    <p>Risus viverra</p>
+                </div>
+                <div class="card">
+                    <img src="../img/user0.png" alt="">
+                    <h3>Dosen Dua</h3>
+                    <p>Risus viverra</p>
+                </div>
+                <div class="card">
+                    <img src="../img/user0.png" alt="">
+                    <h3>Dosen Tiga</h3>
+                    <p>Risus viverra</p>
+                </div>
+                <div class="card">
+                    <img src="../img/user0.png" alt="">
+                    <h3>Dosen Empat</h3>
+                    <p>Risus viverra</p>
+                </div> -->
         </div>
     </div>
 

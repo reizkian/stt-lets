@@ -44,16 +44,6 @@
           Staff
         </a>
       </li>
-      <li>
-        <a href="#" class="nav-link link-dark">
-          Products
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link link-dark">
-          Customers
-        </a>
-      </li>
     </ul>
     <hr>
     <div class="dropdown">

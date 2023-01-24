@@ -38,7 +38,7 @@
                             <td>
                                 <ul class="menu">
                                     <li class="item"><a href="../">Beranda</a></li>
-                                    <li class="item"><a href="../html/tentang_kami.html">Tentang Kami</a></li>
+                                    <li class="item"><a href="../html/tentang_kami.php">Tentang Kami</a></li>
                                     <li class="item"><a href="">Informasi</a></li>
                                     <li class="item"><a href="">Galeri</a></li>
                                     <li class="item"><a href="../html/kontak.html">Kontak</a></li>
@@ -94,7 +94,22 @@
             <h2>Dosen dan Staff</h2>
             <p>Risus viverra adipiscing at in tellus integer feugiat. Sed arcu non odio euismod lacinia. Congue mauris rhoncus aenean vel elit. Velit ut tortor pretium viverra suspendisse potenti nullam. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Amet volutpat consequat </p>
             <div class="content">
-                <div class="card">
+                <?php
+                include '../php/db.php';
+
+                $sql = "SELECT * FROM staff ORDER BY data_order LIMIT 0,3";
+                $result = $connection->query($sql);
+                while ($row = $result->fetch_assoc()) {
+                    echo "<div class='card'>";
+                    echo "<img src='../img/staff/".$row['file_name']."' alt=''>";
+                    echo "<h3>".$row['staff_name']."</h3>";
+                    echo "<p>".$row['staff_role']."</p>";
+                    echo "<p>".$row['email']."</p>";
+                    echo "</div>";
+                    echo "</a>";
+                }
+                ?>
+                <!-- <div class="card">
                     <img src="../img/user0.png" alt="">
                     <h3>Dosen Satu</h3>
                     <p>Risus viverra</p>
@@ -113,10 +128,10 @@
                     <img src="../img/user0.png" alt="">
                     <h3>Dosen Empat</h3>
                     <p>Risus viverra</p>
-                </div>
+                </div> -->
             </div>
             <div class="button-container">
-                <a href="">SELENGKAPNYA</a>
+                <a href="./staff.php">SELENGKAPNYA</a>
             </div>
         </div>
     </div>
@@ -128,7 +143,7 @@
                 <h3 class="title">STT LETS</h3>
                 <ul class="menu">
                     <li class="item"><a href="./index.html">Beranda</a></li>
-                    <li class="item"><a href="./tentang_kami.html">Tentang Kami</a></li>
+                    <li class="item"><a href="./tentang_kami.php">Tentang Kami</a></li>
                     <li class="item"><a href="./informasi.html">Informasi</a></li>
                     <li class="item"><a href="">Galeri</a></li>
                     <li class="item"><a href="">Kontak</a></li>

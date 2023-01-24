@@ -33,7 +33,7 @@
                             <td>
                                 <ul class="menu">
                                     <li class="item"><a href="../">Beranda</a></li>
-                                    <li class="item"><a href="./html/tentang_kami.html">Tentang Kami</a></li>
+                                    <li class="item"><a href="./html/tentang_kami.php">Tentang Kami</a></li>
                                     <li class="item"><a href="">Informasi</a></li>
                                     <li class="item"><a href="">Galeri</a></li>
                                     <li class="item"><a href="./html/kontak.html">Kontak</a></li>
@@ -73,7 +73,7 @@
                 <h3 class="title">STT LETS</h3>
                 <ul class="menu">
                     <li class="item"><a href="./index.html">Beranda</a></li>
-                    <li class="item"><a href="./tentang_kami.html">Tentang Kami</a></li>
+                    <li class="item"><a href="./tentang_kami.php">Tentang Kami</a></li>
                     <li class="item"><a href="./informasi.html">Informasi</a></li>
                     <li class="item"><a href="">Galeri</a></li>
                     <li class="item"><a href="">Kontak</a></li>

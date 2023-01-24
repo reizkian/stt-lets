@@ -84,78 +84,31 @@ p {
 }
 
 
-
-/* HISTORY */
-.history{
+/* PROFESSOR */
+.professor{
     margin-top: 2.5vw;
+}
+
+.professor hr{
+    padding: 2vw 0;
+    width: 100%;
+}
+
+.professor .card{
+    margin-top: 2vw;
     display: flex;
     flex-direction: row;
 }
-.history img{
-    width: 25vw;
-}
-.history .content{
+.professor .card .text{
     margin-left: 2vw;
-    text-align: justify;
-    text-justify: inter-word;
-}
-.history .content h2{
-    margin-bottom: 2vw;
-}
-.history .content p{
-    font-size: 1vw;
 }
 
-
-/* VISION */
-.vision{
-    margin-top: 3.5vw;
-}
-.vision h2{
-    margin-bottom: 1vw;
-}
-/* MISSION */
-.mission{
-    margin-top: 3.5vw;
-}
-.mission h2{
-    margin-bottom: 1vw;
-}
-.mission ol li{
-    font-weight: 200;
-    margin-bottom: 1vw;
-    font-size: 1vw;
+.professor .card .text .subject{
+    font-weight: 600;
 }
 
-
-/* PROFESSOR */
-.professor{
-    margin-top: 3.5vw;
-    text-align: center;
-}
-.professor h2{
-    margin-bottom: 2vw;
-}
-.professor .content{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 3vw;
-}
-.professor .content .card{
-    width: 25vw;
-}
-.professor .content .card img{
-    width: 12vw;
-    border-radius: 50%;
-}
-.professor .button-container{
-    margin-top: 5vw;
-}
-.professor  a{
-    color: black;
-    padding: 1vw 2vw;
-    font-size: 1vw;
-    border: solid 1px black;
+.professor .card .text .staff-subject{
+    font-style: oblique;
 }
 
 /* FOOTER */
