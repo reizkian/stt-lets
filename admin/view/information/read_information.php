@@ -24,7 +24,7 @@ $trim_char = 500;
 while($row = $result->fetch_assoc()){
     echo "<hr>";
     echo "<div class='news'>";
-    echo "<img src='../../img/news/" . $row['file_name'] ."' alt=''/>";
+    echo "<img src='/new/img/news/" . $row['file_name'] ."' alt=''/>";
     echo "<div class='text'>";
     echo "<h1>" . $row['title'] . "</h1>";
     echo "<span>" . $row['author'] . "</span>";
