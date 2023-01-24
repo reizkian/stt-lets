@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- css -->
-    <link rel="stylesheet" href="../css/news.css">
+    <link rel="stylesheet" href="../css/informasi.css">
     <!-- fonst -->
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
     <!-- icon -->
@@ -33,10 +35,10 @@
                             <td>
                                 <ul class="menu">
                                     <li class="item"><a href="../">Beranda</a></li>
-                                    <li class="item"><a href="./html/tentang_kami.php">Tentang Kami</a></li>
+                                    <li class="item"><a href="../html/tentang_kami.php">Tentang Kami</a></li>
                                     <li class="item"><a href="../html/informasi.php">Informasi</a></li>
                                     <li class="item"><a href="">Galeri</a></li>
-                                    <li class="item"><a href="./html/kontak.html">Kontak</a></li>
+                                    <li class="item"><a href="../html/kontak.html">Kontak</a></li>
                                 </ul>
                             </td>
                         </tr>
@@ -48,23 +50,40 @@
         <!-- NEWS -->
         <div class="news">
             <?php
-            include './db.php';
+            include '../php/db.php';
 
-            $id = $_GET['id'];
-            $sql = "SELECT * FROM information WHERE id=$id";
+            function str_trim($str, $char_no)
+            {
+                if (strlen($str) <= $char_no)
+                    return $str;
+                else {
+                    $all_words = explode(" ", $str);
+                    $out_str = '';
+                    foreach ($all_words as $word) {
+                        $temp_str = ($out_str == '') ? $word : $out_str . ' ' . $word;
+                        if (strlen($temp_str) > $char_no - 3) //-3 for 3 dots
+                            return $out_str . "...";
+                        $out_str = $temp_str;
+                    }
+                }
+            }
+
+            $sql = "SELECT * FROM information ORDER BY id DESC";
             $result = $connection->query($sql);
-
             while ($row = $result->fetch_assoc()) {
-                echo "<img src='../img/news/" . $row['file_name'] . "' alt=''/>";
-                echo "<h2>" . $row['title'] . "</h2>";
-                echo "<span class='author'>" . $row['author'] . "</span>";
-                echo "<span class='created'>" . $row['created'] . "</span>";
-                echo "<p>" . nl2br(htmlentities($row['content'], ENT_QUOTES, 'UTF-8')) . "</p>";
+                echo "<div class='card'>";
+                echo "<img src='../img/news/" . $row['file_name'] . "' alt=''>";
+                echo "<div class='text'>";
+                echo "<h3>" . $row['title'] . "</h3>";
+                echo "<span>" . $row['created'] . "</span>";
+                echo "<p class='content'>" . str_trim($row['content'], 300) . "</p>";
+                echo "<a href='../php/news.php?id=".$row['id']."'>selengkapnya</a>";
+                echo "</div>";
+                echo "</div>";
             }
             ?>
         </div>
     </div>
-
 
     <!-- FOOTER -->
     <div class="footer">

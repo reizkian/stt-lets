@@ -55,7 +55,7 @@ p{
 .header h1{
     font-weight: 100;
     font-size: 3.3vw;
-    letter-spacing: 0vw;
+    letter-spacing: 0.24vw;
 }
 .header .menu{
     list-style-type: none;
