@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+:root {
+    --color-primary: #388FA3;
+    --color-grey: #D9D9D9;
+}
+main{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+}
+
+main .nav-title{
+    font-size: 1.5rem;
+    padding-bottom: 0;
+    margin-bottom: -0.1rem;
+}
+
+main .nav-subtitle{
+    font-size: 0.7rem;
+    font-weight: 200;
+}
+
+main .hr{
+    margin-top: -0.8rem;
+}
+
+main .add form{
+    display: flex;
+    flex-direction: column;
+}
+
+main .staff{
+    display: flex;
+    flex-direction: row;
+}
+
+main .staff .text{
+    margin-left: 1rem;
+}
+
+main .staff .text p{
+    margin: 0;
+    padding: 0;
+}
+
+main .staff .text .staff-name{
+    font-family: 'Playfair Display', serif;
+}
+
+main .staff .text .subject{
+    padding-top: 2rem;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+}
+
+main .staff .text .staff-subject{
+    font-style: oblique;
+    font-weight: 200;
+    padding-bottom: 1rem;
+}
+
+main .staff .update{
+    text-decoration: none;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+main .staff .delete{
+    text-decoration: none;
+    background-color: crimson;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    margin-left: 1rem;
+}

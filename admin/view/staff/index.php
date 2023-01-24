@@ -10,7 +10,7 @@
   <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link href="../css/sidebar.css" rel="stylesheet">
-  <link href="../view/information/information.css" rel="stylesheet">
+  <link href="../view/staff/staff.css" rel="stylesheet">
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 </head>
@@ -35,12 +35,12 @@
         </a>
       </li>
       <li>
-        <a href="./information" class="nav-link active" style="background-color: #388FA3;">
+        <a href="./information" class="nav-link link-dark">
           Information
         </a>
       </li>
       <li>
-        <a href="./staff" class="nav-link link-dark">
+        <a href="./staff" class="nav-link active" style="background-color: #388FA3;">
           Staff
         </a>
       </li>
@@ -74,27 +74,29 @@
   </aside>
 
   <main>
-    <h1 class="nav-title">Information</h1>
-    <p class="nav-subtitle">#informasi</p>
+    <h1 class="nav-title">Staff</h1>
+    <p class="nav-subtitle">#Dosen dan Staff STT LETS</p>
     <hr class="hr" width="100%">
 
     <div class="add">
-      <form action="./information/create_information.php" method="POST" name="form">
-        <label for="author">Author</label>
-        <input type="text" name="author" id="author" required>
-        <label for="title">Title</label>
-        <input type="text" name="title" id="title" required>
-        <label for="content">Content</label>
-        <textarea name="content" id="content" rows="7" required></textarea>
-        <label for="created">Created</label>
-        <input class="date" type="text" id="created" name="created" required>
-        <button type="submit">save</button>
-      </form>
+    <form action="./staff/create_staff.php" method="POST" name="form">
+        <label for="">Name</label>
+        <input type="text" name="name" id="name" required>
+        <label for="role">Role</label>
+        <input type="text" name="role" id="role" required>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" required>
+        <label for="subject">Subject</label>
+        <textarea name="subject" id="subject" rows="2" required></textarea>
+        <label for="order">Data Order</label>
+        <input type="number" name="data_order" id="data_order" required>
+        <button type="submit" style='margin-top:2rem;'>save</button>
+    </form>
     </div>
 
     <div class="content">
       <?php
-        include './read_information.php';
+        include './read_staff.php';
       ?>
     </div>
   </main>

@@ -214,15 +214,19 @@ img {
 }
 .news .content .card h3{
     margin-top: 1vw 0;;
+    color: black;
 }
 .news .content .card .news-date{
     font-size: 0.8vw;
     font-weight: 100;
+    color: black;
 }
 .news .content .card .news-text{
     margin-top: 1vw;
     font-size: 1vw;
+    color: black;
 }
+
 
 
 

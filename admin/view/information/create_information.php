@@ -10,10 +10,4 @@ $sql = "INSERT INTO information (author, title, content, created) VALUES ('$auth
 $connection->query($sql);
 $connection->close();
 
-// echo $author;
-// echo $title;
-
-// echo "<p>" . nl2br(htmlentities($content, ENT_QUOTES, 'UTF-8')) . "</p>";
-
-// echo nl2br($created, true);
 header("location:/admin/view/information");

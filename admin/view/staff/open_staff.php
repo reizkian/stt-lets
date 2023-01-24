@@ -10,7 +10,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link href="../../css/sidebar.css" rel="stylesheet">
-    <link href="../information/information.css" rel="stylesheet">
+    <link href="../staff/staff.css" rel="stylesheet">
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 </head>
@@ -35,12 +35,12 @@
                 </a>
             </li>
             <li>
-                <a href="../information" class="nav-link active" style="background-color: #388FA3;">
+                <a href="../information" class="nav-link link-dark">
                     Information
                 </a>
             </li>
             <li>
-                <a href="../staff" class="nav-link link-dark">
+                <a href="../staff" class="nav-link active" style="background-color: #388FA3;">
                     Staff
                 </a>
             </li>
@@ -74,38 +74,42 @@
     </aside>
 
     <main>
-        <h1 class="nav-title">Information</h1>
-        <p class="nav-subtitle">#informasi</p>
-        <hr width="100%">
+        <h1 class="nav-title">Staff</h1>
+        <p class="nav-subtitle">#Dosen dan Staff STT LETS</p>
+        <hr class="hr" width="100%">
+
             <?php
             include '../../db.php';
 
             $id = $_GET["id"];
-            $sql = "SELECT * FROM information WHERE id=$id";
+            $sql = "SELECT * FROM staff WHERE id=$id";
             $result = $connection->query($sql);
             while ($row = $result->fetch_assoc()) {
-                echo "<img src='../../../img/news/" . $row['file_name'] ."' alt=''style='margin-bottom:2rem;'/>";
-                echo "<form action='./update_image.php?id=".$row['id']."' method='POST' enctype='multipart/form-data'>";
-                echo "Select image to upload (recomended size: 900x600px)";
-                echo "<span>".$row['file_name']."</span>";
+                echo "<img src='../../../img/staff/" . $row['file_name'] . "' alt=''style='margin-bottom:2rem;'/>";
+                echo "<form action='./update_image.php?id=" . $row['id'] . "' method='POST' enctype='multipart/form-data'>";
+                echo "Select image to upload (recomended size: 262x262px)";
+                echo "<span>" . $row['file_name'] . "</span>";
                 echo "<input class='button-choose' type='file' name='fileToUpload' id='fileToUpload'>";
                 echo "<input class='button-upload' type='submit' value='Upload Image' name='submit'>";
                 echo "</form>";
-                
+
                 echo "<div class='add'>";
-                echo "<form action='./update_information.php?id=".$row['id']."' method='POST' name='form'>";
-                
-                echo "<label for='author'>Author</label>";
-                echo "<input type='text' name='author' id='author' value='" . $row['author'] . "'required>";
+                echo "<form action='./update_staff.php?id=" . $row['id'] . "' method='POST' name='form'>";
 
-                echo "<label for='title'>Title</label>";
-                echo "<input type='text' name='title' id='title' value='" . $row['title'] . "' required>";
+                echo "<label for='author'>Name</label>";
+                echo "<input type='text' name='name' id='name' value='" . $row['staff_name'] . "'required>";
 
-                echo "<label for='content'>Content</label>";
-                echo "<textarea name='content' id='content' rows='7' required>" . $row['content'] . "</textarea>";
+                echo "<label for='role'>Role</label>";
+                echo "<input type='text' name='role' id='role' value='" . $row['staff_role'] . "' required>";
 
-                echo "<label for='created'>Created</label>";
-                echo "<input class='date' type='text' id='created' name='created' value='" . $row['created'] . "' required>";
+                echo "<label for='email'>Email</label>";
+                echo "<input type='text' name='email' id='email' value='" . $row['email'] . "' required>";
+
+                echo "<label for='subject'>Subject</label>";
+                echo "<textarea name='subject' id='subject' rows='2' required>" . $row['staff_subject'] . "</textarea>";
+
+                echo "<label for='data_order'>Data Order</label>";
+                echo "<input class='date' type='number' id='data_order' name='data_order' value='" . $row['data_order'] . "' required>";
 
                 echo "<button type='submit'>save</button>";
 
@@ -113,9 +117,7 @@
                 echo "</div>";
             }
             $connection->close();
-
             ?>
-        </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

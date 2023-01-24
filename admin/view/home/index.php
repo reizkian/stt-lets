@@ -41,8 +41,8 @@
         </a>
       </li>
       <li>
-        <a href="#" class="nav-link link-dark">
-          Orders
+        <a href="./staff" class="nav-link link-dark">
+          Staff
         </a>
       </li>
       <li>

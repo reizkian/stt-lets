@@ -34,7 +34,7 @@
                         <tr>
                             <td>
                                 <ul class="menu">
-                                    <li class="item"><a href="./index.html">Beranda</a></li>
+                                    <li class="item"><a href="/">Beranda</a></li>
                                     <li class="item"><a href="./html/tentang_kami.html">Tentang Kami</a></li>
                                     <li class="item"><a href="">Informasi</a></li>
                                     <li class="item"><a href="">Galeri</a></li>
@@ -101,28 +101,9 @@
                 Berita
             </h2>
             <div class="content">
-                <div class="card">
-                    <img src="./img/news1.png" alt="">
-                    <h3>Berita Pertama</h3>
-                    <p class="news-date">14 Januari 2023</p>
-                    <p class="news-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore.</p>
-                </div>
-                <div class="card">
-                    <img src="./img/news2.png" alt="">
-                    <h3>Berita Kedua</h3>
-                    <p class="news-date">22 Desember 2022</p>
-                    <p class="news-text">Risus viverra adipiscing at in tellus integer feugiat. Sed arcu non odio
-                        euismod
-                        lacinia. Congue mauris rhoncus aenean vel elit.</p>
-                </div>
-                <div class="card">
-                    <img src="./img/news3.png" alt="">
-                    <h3>Berita Ketiga</h3>
-                    <p class="news-date">4 November 2022</p>
-                    <p class="news-text">Tortor pretium viverra suspendisse potenti nullam. In nisl nisi scelerisque eu.
-                        Tempor id eu nisl nunc mi. Morbi tristique senectus</p>
-                </div>
+                <?php
+                readInformation($connection);
+                ?>
             </div>
         </div>
 

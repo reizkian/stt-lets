@@ -13,3 +13,37 @@ function readEducationText($connection)
         }
     }
 }
+
+function str_trim($str, $char_no)
+{
+    if (strlen($str) <= $char_no)
+        return $str;
+    else {
+        $all_words = explode(" ", $str);
+        $out_str = '';
+        foreach ($all_words as $word) {
+            $temp_str = ($out_str == '') ? $word : $out_str . ' ' . $word;
+            if (strlen($temp_str) > $char_no - 3) //-3 for 3 dots
+                return $out_str . "...";
+            $out_str = $temp_str;
+        }
+    }
+}
+
+function readInformation($connection)
+{
+    $sql = "SELECT * FROM information ORDER BY id DESC LIMIT 0,3";
+    $result = $connection->query($sql);
+
+    while ($row = $result->fetch_assoc()) {
+        echo "<a href=./php/news.php?id=".$row['id'].">";
+        echo "<div class='card'>";
+        echo "<img src='./img/news/".$row['file_name']."' alt=''>";
+        echo "<h3>".$row['title']."</h3>";
+        echo "<p class='news-date'>".$row['created']."</p>";
+        echo "<p class='news-text'>".str_trim($row['content'], 100)."</p>";
+        echo "</div>";
+        echo "</a>";
+    }
+    $connection->close();
+}
