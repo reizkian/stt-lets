@@ -69,13 +69,13 @@
         <hr class="hr" width="100%">
 
             <?php
-            include '../../db.php';
+            include '/new/admin/db.php';
 
             $id = $_GET["id"];
             $sql = "SELECT * FROM staff WHERE id=$id";
             $result = $connection->query($sql);
             while ($row = $result->fetch_assoc()) {
-                echo "<img src='../../../img/staff/" . $row['file_name'] . "' alt=''style='margin-bottom:2rem;'/>";
+                echo "<img src='/new/img/staff/" . $row['file_name'] . "' alt=''style='margin-bottom:2rem;'/>";
                 echo "<form action='/new/admin/view/staff/update_image.php?id=" . $row['id'] . "' method='POST' enctype='multipart/form-data'>";
                 echo "Select image to upload (recomended size: 262x262px)";
                 echo "<span>" . $row['file_name'] . "</span>";
