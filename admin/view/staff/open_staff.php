@@ -75,13 +75,6 @@
             $sql = "SELECT * FROM staff WHERE id=$id";
             $result = $connection->query($sql);
             
-            echo $id;
-            if($connection){
-                echo "connected to database";
-            }else{
-                echo "connection failed";
-            }
-
             while ($row = $result->fetch_assoc()) {
                 echo "<img src='/new/img/staff/" . $row['file_name'] . "' alt=''style='margin-bottom:2rem;'/>";
                 echo "<form action='/new/admin/view/staff/update_image.php?id=" . $row['id'] . "' method='POST' enctype='multipart/form-data'>";
