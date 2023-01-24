@@ -10,7 +10,7 @@ $row = $result->fetch_assoc();
 
 if ($result->num_rows > 0) {
     if ($password == $row["password"]) {
-        header("location:/admin/view/home");
+        header("location:/new/view/home");
         echo $row["username"];
         echo $row["password"];
     } else {

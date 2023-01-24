@@ -12,4 +12,4 @@ $sql = "INSERT INTO staff (staff_name, staff_role, email, staff_subject, data_or
 $connection->query($sql);
 $connection->close();
 
-header("location:/admin/view/staff");
+header("location:/new/view/staff");

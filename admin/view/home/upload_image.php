@@ -47,5 +47,5 @@ if ($uploadOk == 0) {
   }
 }
 
-header("location:/admin/view/home");
+header("location:/new/view/home");
 ?>

@@ -10,4 +10,4 @@ $sql = "INSERT INTO information (author, title, content, created) VALUES ('$auth
 $connection->query($sql);
 $connection->close();
 
-header("location:/admin/view/information");
+header("location:/new/view/information");

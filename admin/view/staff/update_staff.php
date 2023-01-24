@@ -13,4 +13,4 @@ $sql = "UPDATE staff SET staff_name='$name', staff_role='$role', email='$email',
 
 $connection->query($sql);
 $connection->close();
-header("location:/admin/view/staff");
+header("location:/new/view/staff");
