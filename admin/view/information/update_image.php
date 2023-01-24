@@ -46,5 +46,5 @@ $sql = "UPDATE information SET file_name='$fileName' WHERE id=$id";
 $connection->query($sql);
 $connection->close();
 
-header("location:/new/view/information/open_information.php?id=$id");
+header("location:/new/admin/view/information/open_information.php?id=$id");
 ?>

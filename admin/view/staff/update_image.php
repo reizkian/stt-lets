@@ -46,5 +46,5 @@ $sql = "UPDATE staff SET file_name='$fileName' WHERE id=$id";
 $connection->query($sql);
 $connection->close();
 
-header("location:/new/view/staff/open_staff.php?id=$id");
+header("location:/new/admin/view/staff/open_staff.php?id=$id");
 ?>

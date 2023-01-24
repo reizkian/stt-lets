@@ -8,4 +8,4 @@ $sql = "DELETE FROM information WHERE id=$id";
 $connection->query($sql);
 $connection->close();
 
-header("location:/new/view/information");
+header("location:/new/admin/view/information");

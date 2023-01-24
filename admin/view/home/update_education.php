@@ -6,4 +6,4 @@ $sql = "UPDATE home set content='$content' where identifier='education-text'";
 $result = $connection->query($sql);
 $connection->close();
 
-header("location:/new/view/home");
+header("location:/new/admin/view/home");
