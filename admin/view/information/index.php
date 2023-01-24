@@ -30,7 +30,7 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="./home" class="nav-link link-dark">
+        <a href="/home" class="nav-link link-dark">
           Home
         </a>
       </li>
