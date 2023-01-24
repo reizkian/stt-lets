@@ -7,7 +7,7 @@ $result = $connection->query($sql);
 while($row = $result->fetch_assoc()){
     echo "<hr>";
     echo "<div class='staff'>";
-    echo "<img src='../../img/staff/" . $row['file_name'] ."' alt=''/>";
+    echo "<img src='/new/img/staff/" . $row['file_name'] ."' alt=''/>";
     echo "<div class='text'>";
     echo "<h3 class='staff-name'>" . $row['data_order']."# " .$row['staff_name'] . "</h3>";
     echo "<p>" . $row['staff_role']. "</p>";
