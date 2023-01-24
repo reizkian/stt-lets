@@ -29,17 +29,17 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto" >
       <li class="nav-item">
-        <a href="./home" class="nav-link active" style="background-color: #388FA3;">
+        <a href="/new/admin/view/home" class="nav-link active" style="background-color: #388FA3;">
           Home
         </a>
       </li>
       <li>
-        <a href="./information" class="nav-link link-dark">
+        <a href="/new/admin/view/information" class="nav-link link-dark">
           Information
         </a>
       </li>
       <li>
-        <a href="./staff" class="nav-link link-dark">
+        <a href="/new/admin/view/staff" class="nav-link link-dark">
           Staff
         </a>
       </li>
