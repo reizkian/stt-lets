@@ -69,7 +69,7 @@
     <hr class="hr" width="100%">
 
     <div class="add">
-      <form action="./information/create_information.php" method="POST" name="form">
+      <form action="/new/admin/view/information/create_information.php" method="POST" name="form">
         <label for="author">Author</label>
         <input type="text" name="author" id="author" required>
         <label for="title">Title</label>

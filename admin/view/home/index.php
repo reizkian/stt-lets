@@ -72,7 +72,7 @@
       <div class="banner">
         <p><span>#banner1.png</span> image size 1187x516 px</p>
         <img src="../../../img/banner1.png" alt="">
-        <form action="./home/upload_image.php?file_name=banner1.png" method="post" enctype="multipart/form-data">
+        <form action="/new/admin/view/home/upload_image.php?file_name=banner1.png" method="post" enctype="multipart/form-data">
           Select image to upload banner1.png
           <input type="file" name="fileToUpload" id="fileToUpload">
           <input type="submit" value="Upload Image" name="submit">
@@ -80,7 +80,7 @@
         <hr>
         <p><span>#banner2.png</span> image size 1187x516 px</p>
         <img src="../../../img/banner2.png" alt="">
-        <form action="./home/upload_image.php?file_name=banner2.png" method="post" enctype="multipart/form-data">
+        <form action="/new/admin/view/home/upload_image.php?file_name=banner2.png" method="post" enctype="multipart/form-data">
           Select image to upload banner2.png
           <input type="file" name="fileToUpload" id="fileToUpload">
           <input type="submit" value="Upload Image" name="submit">
@@ -88,7 +88,7 @@
         <hr>
         <p><span>#banner3.png</span> image size 1187x516 px</p>
         <img src="../../../img/banner3.png" alt="">
-        <form action="./home/upload_image.php?file_name=banner3.png" method="post" enctype="multipart/form-data">
+        <form action="/new/admin/view/home/upload_image.php?file_name=banner3.png" method="post" enctype="multipart/form-data">
           Select image to upload banner3.png
           <input type="file" name="fileToUpload" id="fileToUpload">
           <input type="submit" value="Upload Image" name="submit">
@@ -96,7 +96,7 @@
         <hr>
         <p><span>#education0.png</span> image size 507x293 px</p>
         <img src="../../../img/education0.png" alt="">
-        <form action="./home/upload_image.php?file_name=education0.png" method="post" enctype="multipart/form-data">
+        <form action="/new/admin/view/home/upload_image.php?file_name=education0.png" method="post" enctype="multipart/form-data">
           Select image to upload education0.png
           <input type="file" name="fileToUpload" id="fileToUpload">
           <input type="submit" value="Upload Image" name="submit">

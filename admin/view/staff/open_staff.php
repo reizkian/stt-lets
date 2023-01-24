@@ -76,7 +76,7 @@
             $result = $connection->query($sql);
             while ($row = $result->fetch_assoc()) {
                 echo "<img src='../../../img/staff/" . $row['file_name'] . "' alt=''style='margin-bottom:2rem;'/>";
-                echo "<form action='./update_image.php?id=" . $row['id'] . "' method='POST' enctype='multipart/form-data'>";
+                echo "<form action='/new/admin/view/staff/update_image.php?id=" . $row['id'] . "' method='POST' enctype='multipart/form-data'>";
                 echo "Select image to upload (recomended size: 262x262px)";
                 echo "<span>" . $row['file_name'] . "</span>";
                 echo "<input class='button-choose' type='file' name='fileToUpload' id='fileToUpload'>";
@@ -84,7 +84,7 @@
                 echo "</form>";
 
                 echo "<div class='add'>";
-                echo "<form action='./update_staff.php?id=" . $row['id'] . "' method='POST' name='form'>";
+                echo "<form action='/new/admin/view/staff/update_staff.php?id=" . $row['id'] . "' method='POST' name='form'>";
 
                 echo "<label for='author'>Name</label>";
                 echo "<input type='text' name='name' id='name' value='" . $row['staff_name'] . "'required>";

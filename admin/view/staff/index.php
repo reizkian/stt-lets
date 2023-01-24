@@ -70,7 +70,7 @@
     <hr class="hr" width="100%">
 
     <div class="add">
-    <form action="./staff/create_staff.php" method="POST" name="form">
+    <form action="/new/admin/view/staff/create_staff.php" method="POST" name="form">
         <label for="">Name</label>
         <input type="text" name="name" id="name" required>
         <label for="role">Role</label>
