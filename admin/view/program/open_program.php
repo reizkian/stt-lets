@@ -9,8 +9,8 @@
     <title>Admin STT LETS</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link href="/new/admin/css/sidebar.css" rel="stylesheet">
-    <link href="/new/admin//view/information/information.css" rel="stylesheet">
+    <link href="../../css/sidebar.css" rel="stylesheet">
+    <link href="./program.css" rel="stylesheet">
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 </head>
@@ -35,7 +35,7 @@
                 </a>
             </li>
             <li>
-                <a href="/new/admin/view/information/" class="nav-link active" style="background-color: #388FA3;">
+                <a href="/new/admin/view/information/" class="nav-link link-dark">
                     Information
                 </a>
             </li>
@@ -45,11 +45,14 @@
                 </a>
             </li>
             <li>
-            <li>
                 <a href="/new/admin/view/head/" class="nav-link link-dark">
-                    Education
+                    Head
                 </a>
             </li>
+            <li>
+                <a href="/new/admin/view/program/" class="nav-link active" style="background-color: #388FA3;">
+                    Program
+                </a>
             </li>
         </ul>
         <hr>
@@ -71,46 +74,66 @@
     </aside>
 
     <main>
-        <h1 class="nav-title">Information</h1>
-        <p class="nav-subtitle">#informasi</p>
-        <hr width="100%">
+        <h1 class="nav-title">Program</h1>
+        <p class="nav-subtitle">#program</p>
+        <hr class="hr" width="100%">
         <?php
         include '../../db.php';
 
         $id = $_GET["id"];
-        $sql = "SELECT * FROM information WHERE id=$id";
+        $sql = "SELECT * FROM program WHERE id=$id";
         $result = $connection->query($sql);
+
         while ($row = $result->fetch_assoc()) {
-            echo "<img src='/new/img/news/" . $row['file_name'] . "' alt=''style='margin-bottom:2rem;'/>";
-            echo "<form action='/new/admin/view/information/update_image.php?id=" . $row['id'] . "' method='POST' enctype='multipart/form-data'>";
-            echo "Select image to upload (recomended size: 900x600px)";
-            echo "<span>" . $row['file_name'] . "</span>";
+            echo "<img src='/new/img/program/" . $row['program_picture'] . "' alt=''style='margin-bottom:2rem;'/>";
+            echo "<form action='/new/admin/view/program/update_image.php?id=" . $row['id'] . "' method='POST' enctype='multipart/form-data'>";
+            echo "Select image to upload (recomended size: 304x223px)";
+            echo "<span>" . $row['program_picture'] . "</span>";
             echo "<input class='button-choose' type='file' name='fileToUpload' id='fileToUpload'>";
             echo "<input class='button-upload' type='submit' value='Upload Image' name='submit'>";
             echo "</form>";
 
+            echo "<hr>";
+
+            echo "<img src='/new/document/" . $row['program_document'] . "' alt=''style='margin-bottom:2rem;'/>";
+            echo "<form action='/new/admin/view/program/update_document.php?id=" . $row['id'] . "' method='POST' enctype='multipart/form-data'>";
+            echo "Select document to upload";
+            echo "<span>" . $row['program_document'] . "</span>";
+            echo "<input class='button-choose' type='file' name='fileToUpload' id='fileToUpload'>";
+            echo "<input class='button-upload' type='submit' value='Upload Document' name='submit'>";
+            echo "</form>";
+            echo "</div>";
+
+            echo "<hr>";
+
             echo "<div class='add'>";
-            echo "<form action='/new/admin/view/information/update_information.php?id=" . $row['id'] . "' method='POST' name='form'>";
+            echo "<form action='/new/admin/view/program/update_program.php?id=" . $row['id'] . "' method='POST' name='form'>";
 
-            echo "<label for='author'>Author</label>";
-            echo "<input type='text' name='author' id='author' value='" . $row['author'] . "'required>";
+            echo "<label for='program_level'>Program Level</label>";
+            echo "<select id='program_level' name='program_level'>";
+            echo $row['program_level'] == "S1" ? "<option selected value='S1'>SARJANA</option>" : "<option value='S1'>SARJANA</option>";
+            echo $row['program_level'] == "S2" ? "<option selected value='S2'>MAGISTER</option>" : "<option value='S2'>MAGISTER</option>";
+            echo $row['program_level'] == "S3" ? "<option selected value='S3'>DOKTORAL</option>" : "<option value='S3'>DOKTORAL</option>";
+            echo "</select>";
 
-            echo "<label for='title'>Title</label>";
-            echo "<input type='text' name='title' id='title' value='" . $row['title'] . "' required>";
+            echo "<label for='program_name'>Program Name</label>";
+            echo "<input type='text' name='program_name' id='program_name' value='" . $row['program_name'] . "' required>";
 
-            echo "<label for='content'>Content</label>";
-            echo "<textarea name='content' id='content' rows='7' required>" . $row['content'] . "</textarea>";
+            echo "<label for='program_description'>Program Description</label>";
+            echo "<textarea name='program_description' id='program_description' rows='7' required>" . $row['program_description'] . "</textarea>";
 
-            echo "<label for='created'>Created</label>";
-            echo "<input class='date' type='text' id='created' name='created' value='" . $row['created'] . "' required>";
+            echo "<label for='program_vision'>Program Vision</label>";
+            echo "<textarea name='program_vision' id='program_vision' rows='3' required>" . $row['program_vision'] . "</textarea>";
+
+            echo "<label for='program_mission'>Program Mission</label>";
+            echo "<textarea name='program_mission' id='program_mission' rows='7' required>" . $row['program_mission'] . "</textarea>";
 
             echo "<button type='submit'>save</button>";
 
             echo "</form>";
-            echo "</div>";
         }
-        $connection->close();
 
+        $connection->close();
         ?>
     </main>
 
