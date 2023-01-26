@@ -44,6 +44,13 @@
                     Staff
                 </a>
             </li>
+            <li>
+            <li>
+                <a href="/new/admin/view/education/" class="nav-link link-dark">
+                    Education
+                </a>
+            </li>
+            </li>
         </ul>
         <hr>
         <div class="dropdown">
@@ -67,44 +74,44 @@
         <h1 class="nav-title">Information</h1>
         <p class="nav-subtitle">#informasi</p>
         <hr width="100%">
-            <?php
-            include '../../db.php';
+        <?php
+        include '../../db.php';
 
-            $id = $_GET["id"];
-            $sql = "SELECT * FROM information WHERE id=$id";
-            $result = $connection->query($sql);
-            while ($row = $result->fetch_assoc()) {
-                echo "<img src='/new/img/news/" . $row['file_name'] ."' alt=''style='margin-bottom:2rem;'/>";
-                echo "<form action='/new/admin/view/information/update_image.php?id=".$row['id']."' method='POST' enctype='multipart/form-data'>";
-                echo "Select image to upload (recomended size: 900x600px)";
-                echo "<span>".$row['file_name']."</span>";
-                echo "<input class='button-choose' type='file' name='fileToUpload' id='fileToUpload'>";
-                echo "<input class='button-upload' type='submit' value='Upload Image' name='submit'>";
-                echo "</form>";
-                
-                echo "<div class='add'>";
-                echo "<form action='/new/admin/view/information/update_information.php?id=".$row['id']."' method='POST' name='form'>";
-                
-                echo "<label for='author'>Author</label>";
-                echo "<input type='text' name='author' id='author' value='" . $row['author'] . "'required>";
+        $id = $_GET["id"];
+        $sql = "SELECT * FROM information WHERE id=$id";
+        $result = $connection->query($sql);
+        while ($row = $result->fetch_assoc()) {
+            echo "<img src='/new/img/news/" . $row['file_name'] . "' alt=''style='margin-bottom:2rem;'/>";
+            echo "<form action='/new/admin/view/information/update_image.php?id=" . $row['id'] . "' method='POST' enctype='multipart/form-data'>";
+            echo "Select image to upload (recomended size: 900x600px)";
+            echo "<span>" . $row['file_name'] . "</span>";
+            echo "<input class='button-choose' type='file' name='fileToUpload' id='fileToUpload'>";
+            echo "<input class='button-upload' type='submit' value='Upload Image' name='submit'>";
+            echo "</form>";
 
-                echo "<label for='title'>Title</label>";
-                echo "<input type='text' name='title' id='title' value='" . $row['title'] . "' required>";
+            echo "<div class='add'>";
+            echo "<form action='/new/admin/view/information/update_information.php?id=" . $row['id'] . "' method='POST' name='form'>";
 
-                echo "<label for='content'>Content</label>";
-                echo "<textarea name='content' id='content' rows='7' required>" . $row['content'] . "</textarea>";
+            echo "<label for='author'>Author</label>";
+            echo "<input type='text' name='author' id='author' value='" . $row['author'] . "'required>";
 
-                echo "<label for='created'>Created</label>";
-                echo "<input class='date' type='text' id='created' name='created' value='" . $row['created'] . "' required>";
+            echo "<label for='title'>Title</label>";
+            echo "<input type='text' name='title' id='title' value='" . $row['title'] . "' required>";
 
-                echo "<button type='submit'>save</button>";
+            echo "<label for='content'>Content</label>";
+            echo "<textarea name='content' id='content' rows='7' required>" . $row['content'] . "</textarea>";
 
-                echo "</form>";
-                echo "</div>";
-            }
-            $connection->close();
+            echo "<label for='created'>Created</label>";
+            echo "<input class='date' type='text' id='created' name='created' value='" . $row['created'] . "' required>";
 
-            ?>
+            echo "<button type='submit'>save</button>";
+
+            echo "</form>";
+            echo "</div>";
+        }
+        $connection->close();
+
+        ?>
         </div>
     </main>
 

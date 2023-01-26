@@ -8,10 +8,9 @@
 
   <title>Admin STT LETS</title>
   <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <link href="../css/sidebar.css" rel="stylesheet">
-  <link href="../view/education/education.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="../../css/sidebar.css" rel="stylesheet">
+  <link href="./education.css" rel="stylesheet">
 </head>
 
 <body>
@@ -27,30 +26,31 @@
       <span class="title fs-5">STT LETS</span>
     </a>
     <hr>
-    <ul class="nav nav-pills flex-column mb-auto" >
+    <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="./home" class="nav-link link-dark">
+        <a href="/new/admin/view/home/" class="nav-link link-dark">
           Home
         </a>
       </li>
       <li>
-        <a href="./information" class="nav-link link-dark">
+        <a href="/new/admin/view/information/" class="nav-link link-dark">
           Information
         </a>
       </li>
       <li>
-        <a href="./staff" class="nav-link link-dark">
+        <a href="/new/admin/view/staff/" class="nav-link link-dark">
           Staff
         </a>
-        <a href="./education" class="nav-link active" style="background-color: #388FA3;">
+      </li>
+      <li>
+        <a href="/new/admin/view/education/" class="nav-link active" style="background-color: #388FA3;">
           Education
         </a>
       </li>
     </ul>
     <hr>
     <div class="dropdown">
-      <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
-        data-bs-toggle="dropdown" aria-expanded="false">
+      <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
         <img src="../../../img/user0.png" alt="" width="32" height="32" class="rounded-circle me-2">
         <strong>web admin</strong>
       </a>
@@ -72,13 +72,11 @@
     <hr class="hr" width="100%">
 
     <?php
-        include './read_head.php'
+    include './read_head.php'
     ?>
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   <script src="../js/sidebar.js"></script>
 </body>
 

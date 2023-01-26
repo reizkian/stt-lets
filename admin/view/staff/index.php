@@ -44,7 +44,11 @@
           Staff
         </a>
       </li>
-
+      <li>
+        <a href="/new/admin/view/education/" class="nav-link link-dark">
+          Education
+        </a>
+      </li>
     </ul>
     <hr>
     <div class="dropdown">
@@ -70,7 +74,7 @@
     <hr class="hr" width="100%">
 
     <div class="add">
-    <form action="/new/admin/view/staff/create_staff.php" method="POST" name="form">
+      <form action="/new/admin/view/staff/create_staff.php" method="POST" name="form">
         <label for="">Name</label>
         <input type="text" name="name" id="name" required>
         <label for="role">Role</label>
@@ -82,12 +86,12 @@
         <label for="order">Data Order</label>
         <input type="number" name="data_order" id="data_order" required>
         <button type="submit" style='margin-top:2rem;'>save</button>
-    </form>
+      </form>
     </div>
 
     <div class="content">
       <?php
-        include './read_staff.php';
+      include './read_staff.php';
       ?>
     </div>
   </main>

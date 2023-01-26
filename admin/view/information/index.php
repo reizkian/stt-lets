@@ -44,6 +44,11 @@
           Staff
         </a>
       </li>
+      <li>
+        <a href="/new/admin/view/education/" class="nav-link link-dark">
+          Education
+        </a>
+      </li>
     </ul>
     <hr>
     <div class="dropdown">

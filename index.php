@@ -34,7 +34,7 @@
                         <tr>
                             <td>
                                 <ul class="menu">
-                                    <li class="item"><a href="/">Beranda</a></li>
+                                    <li class="item"><a href="./">Beranda</a></li>
                                     <li class="item"><a href="./html/tentang_kami.php">Tentang Kami</a></li>
                                     <li class="item"><a href="./html/informasi.php">Informasi</a></li>
                                     <li class="item"><a href="">Galeri</a></li>

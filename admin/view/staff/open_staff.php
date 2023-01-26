@@ -44,6 +44,11 @@
                     Staff
                 </a>
             </li>
+            <li>
+                <a href="/new/admin/view/education/" class="nav-link link-dark">
+                    Education
+                </a>
+            </li>
         </ul>
         <hr>
         <div class="dropdown">
@@ -68,47 +73,47 @@
         <p class="nav-subtitle">#Dosen dan Staff STT LETS</p>
         <hr class="hr" width="100%">
 
-            <?php
-            include '../../db.php';
+        <?php
+        include '../../db.php';
 
-            $id = $_GET["id"];
-            $sql = "SELECT * FROM staff WHERE id=$id";
-            $result = $connection->query($sql);
-            
-            while ($row = $result->fetch_assoc()) {
-                echo "<img src='/new/img/staff/" . $row['file_name'] . "' alt=''style='margin-bottom:2rem;'/>";
-                echo "<form action='/new/admin/view/staff/update_image.php?id=" . $row['id'] . "' method='POST' enctype='multipart/form-data'>";
-                echo "Select image to upload (recomended size: 262x262px)";
-                echo "<span>" . $row['file_name'] . "</span>";
-                echo "<input class='button-choose' type='file' name='fileToUpload' id='fileToUpload'>";
-                echo "<input class='button-upload' type='submit' value='Upload Image' name='submit'>";
-                echo "</form>";
+        $id = $_GET["id"];
+        $sql = "SELECT * FROM staff WHERE id=$id";
+        $result = $connection->query($sql);
 
-                echo "<div class='add'>";
-                echo "<form action='/new/admin/view/staff/update_staff.php?id=" . $row['id'] . "' method='POST' name='form'>";
+        while ($row = $result->fetch_assoc()) {
+            echo "<img src='/new/img/staff/" . $row['file_name'] . "' alt=''style='margin-bottom:2rem;'/>";
+            echo "<form action='/new/admin/view/staff/update_image.php?id=" . $row['id'] . "' method='POST' enctype='multipart/form-data'>";
+            echo "Select image to upload (recomended size: 262x262px)";
+            echo "<span>" . $row['file_name'] . "</span>";
+            echo "<input class='button-choose' type='file' name='fileToUpload' id='fileToUpload'>";
+            echo "<input class='button-upload' type='submit' value='Upload Image' name='submit'>";
+            echo "</form>";
 
-                echo "<label for='author'>Name</label>";
-                echo "<input type='text' name='name' id='name' value='" . $row['staff_name'] . "'required>";
+            echo "<div class='add'>";
+            echo "<form action='/new/admin/view/staff/update_staff.php?id=" . $row['id'] . "' method='POST' name='form'>";
 
-                echo "<label for='role'>Role</label>";
-                echo "<input type='text' name='role' id='role' value='" . $row['staff_role'] . "' required>";
+            echo "<label for='author'>Name</label>";
+            echo "<input type='text' name='name' id='name' value='" . $row['staff_name'] . "'required>";
 
-                echo "<label for='email'>Email</label>";
-                echo "<input type='text' name='email' id='email' value='" . $row['email'] . "' required>";
+            echo "<label for='role'>Role</label>";
+            echo "<input type='text' name='role' id='role' value='" . $row['staff_role'] . "' required>";
 
-                echo "<label for='subject'>Subject</label>";
-                echo "<textarea name='subject' id='subject' rows='2' required>" . $row['staff_subject'] . "</textarea>";
+            echo "<label for='email'>Email</label>";
+            echo "<input type='text' name='email' id='email' value='" . $row['email'] . "' required>";
 
-                echo "<label for='data_order'>Data Order</label>";
-                echo "<input class='date' type='number' id='data_order' name='data_order' value='" . $row['data_order'] . "' required>";
+            echo "<label for='subject'>Subject</label>";
+            echo "<textarea name='subject' id='subject' rows='2' required>" . $row['staff_subject'] . "</textarea>";
 
-                echo "<button type='submit'>save</button>";
+            echo "<label for='data_order'>Data Order</label>";
+            echo "<input class='date' type='number' id='data_order' name='data_order' value='" . $row['data_order'] . "' required>";
 
-                echo "</form>";
-                echo "</div>";
-            }
-            $connection->close();
-            ?>
+            echo "<button type='submit'>save</button>";
+
+            echo "</form>";
+            echo "</div>";
+        }
+        $connection->close();
+        ?>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
