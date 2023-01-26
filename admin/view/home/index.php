@@ -42,8 +42,8 @@
         <a href="/new/admin/view/staff/" class="nav-link link-dark">
           Staff
         </a>
-        <a href="/new/admin/view/education/" class="nav-link link-dark">
-          Education
+        <a href="/new/admin/view/head/" class="nav-link link-dark">
+          Head
         </a>
       </li>
     </ul>

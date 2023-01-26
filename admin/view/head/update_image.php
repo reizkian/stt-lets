@@ -47,5 +47,5 @@ if ($uploadOk == 0) {
   }
 }
 
-header("location:/new/admin/view/education/");
+header("location:/new/admin/view/head/");
 ?>

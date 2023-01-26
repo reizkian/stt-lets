@@ -10,4 +10,4 @@ $sql = "UPDATE head SET head_name='$head_name', head_role='$head_role', head_mes
 
 $connection->query($sql);
 $connection->close();
-header("location:/new/admin/view/education/");
+header("location:/new/admin/view/head/");

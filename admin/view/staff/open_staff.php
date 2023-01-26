@@ -45,7 +45,7 @@
                 </a>
             </li>
             <li>
-                <a href="/new/admin/view/education/" class="nav-link link-dark">
+                <a href="/new/admin/view/head/" class="nav-link link-dark">
                     Education
                 </a>
             </li>
