@@ -9,3 +9,7 @@ CREATE TABLE home(id int not null auto_increment primary key, identifier varchar
 
 -- INFORMATION
 CREATE TABLE information(id int not null auto_increment primary key, author varchar(50), title varchar(50), content LONGTEXT, created varchar(50), file_name varchar(50));
+
+-- EDUCATION
+CREATE TABLE head(id int not null auto_increment primary key, head_name varchar(50), head_role varchar(50), head_message LONGTEXT, file_name varchar(50));
+INSERT INTO head(head_name, head_role, head_message, file_name) VALUES ("Rachmat T Manullang", "Ketua STT LETS", "Kekayaan suatu bangsa bukanlah sumber daya alamnya, tetapi manusianya. Manusia yang kaya bukanlah mereka yang hanya memiliki kepintaran atau karunia tetapi mereka yang memiliki panggilan, karakter dan kompetensi. Di tengah globalisasi yang dipenuhi dengan filosofi humanis dan relativisme umat Tuhan ditantang untuk membuktikan philosophy kerajaan Allah di atas semuanya.", "head.png");
