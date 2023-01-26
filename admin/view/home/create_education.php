@@ -7,4 +7,4 @@ $result = $connection->query($sql);
 $connection->close();
 
 echo $content;
-header("location:/new/admin/view/home");
+header("location:/new/admin/view/home/");

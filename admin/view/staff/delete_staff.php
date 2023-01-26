@@ -8,4 +8,4 @@ $sql = "DELETE FROM staff WHERE id=$id";
 $connection->query($sql);
 $connection->close();
 
-header("location:/new/admin/view/staff");
+header("location:/new/admin/view/staff/");

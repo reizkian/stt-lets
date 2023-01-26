@@ -11,4 +11,4 @@ $sql = "UPDATE information SET author='$author', title='$title', content='$conte
 
 $connection->query($sql);
 $connection->close();
-header("location:/new/admin/view/information");
+header("location:/new/admin/view/information/");
