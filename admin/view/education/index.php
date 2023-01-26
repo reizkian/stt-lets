@@ -7,13 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Admin STT LETS</title>
-  <link href="../css/sidebar.css" rel="stylesheet">
-  <link href="../view/home/home.css" rel="stylesheet">
   <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link href="../css/sidebar.css" rel="stylesheet">
-  <link href="../view/home/home.css" rel="stylesheet">
+  <link href="../view/education/education.css" rel="stylesheet">
 </head>
 
 <body>
@@ -31,7 +29,7 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto" >
       <li class="nav-item">
-        <a href="./home" class="nav-link active" style="background-color: #388FA3;">
+        <a href="./home" class="nav-link link-dark">
           Home
         </a>
       </li>
@@ -44,7 +42,7 @@
         <a href="./staff" class="nav-link link-dark">
           Staff
         </a>
-        <a href="./education" class="nav-link link-dark">
+        <a href="./education" class="nav-link active" style="background-color: #388FA3;">
           Education
         </a>
       </li>
@@ -69,50 +67,13 @@
   </aside>
 
   <main>
-    <h1 class="nav-title">Home</h1>
-    <p class="nav-subtitle">#beranda</p>
+    <h1 class="nav-title">Education</h1>
+    <p class="nav-subtitle">#pendidikan</p>
     <hr class="hr" width="100%">
 
-    <div class="content">
-      <div class="banner">
-        <p><span>#banner1.png</span> image size 1187x516 px</p>
-        <img src="../../../img/banner1.png" alt="">
-        <form action="./home/upload_image.php?file_name=banner1.png" method="post" enctype="multipart/form-data">
-          Select image to upload banner1.png
-          <input type="file" name="fileToUpload" id="fileToUpload">
-          <input type="submit" value="Upload Image" name="submit">
-        </form>
-        <hr>
-        <p><span>#banner2.png</span> image size 1187x516 px</p>
-        <img src="../../../img/banner2.png" alt="">
-        <form action="./home/upload_image.php?file_name=banner2.png" method="post" enctype="multipart/form-data">
-          Select image to upload banner2.png
-          <input type="file" name="fileToUpload" id="fileToUpload">
-          <input type="submit" value="Upload Image" name="submit">
-        </form>
-        <hr>
-        <p><span>#banner3.png</span> image size 1187x516 px</p>
-        <img src="../../../img/banner3.png" alt="">
-        <form action="./home/upload_image.php?file_name=banner3.png" method="post" enctype="multipart/form-data">
-          Select image to upload banner3.png
-          <input type="file" name="fileToUpload" id="fileToUpload">
-          <input type="submit" value="Upload Image" name="submit">
-        </form>
-        <hr>
-        <p><span>#education0.png</span> image size 507x293 px</p>
-        <img src="../../../img/education0.png" alt="">
-        <form action="./home/upload_image.php?file_name=education0.png" method="post" enctype="multipart/form-data">
-          Select image to upload education0.png
-          <input type="file" name="fileToUpload" id="fileToUpload">
-          <input type="submit" value="Upload Image" name="submit">
-        </form>
-        <hr>
-      </div>
-      <div class="education-text">
-        <p><span>#EducationText</span> varchar(1000)</p>
-        <?php include './read_education.php';?>
-      </div>
-    </div>
+    <?php
+        include './read_head.php'
+    ?>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
