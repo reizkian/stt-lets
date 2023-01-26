@@ -47,6 +47,11 @@
           Head
         </a>
       </li>
+      <li>
+        <a href="/new/admin/view/program/" class="nav-link link-dark">
+          Program
+        </a>
+      </li>
     </ul>
     <hr>
     <div class="dropdown">
