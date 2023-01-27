@@ -66,7 +66,7 @@
         <li>
           <hr class="dropdown-divider">
         </li> -->
-        <li><a class="dropdown-item" href="../../admin">Sign out</a></li>
+        <li><a class="dropdown-item" href="/new/admin/">Sign out</a></li>
       </ul>
     </div>
   </aside>
