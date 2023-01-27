@@ -47,3 +47,4 @@ function readInformation($connection)
     }
     $connection->close();
 }
+

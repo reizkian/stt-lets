@@ -5,17 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- css -->
-    <link rel="stylesheet" href="../css/pendidikan.css">
+    <link rel="stylesheet" href="../css/program.css">
     <!-- fonst -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
     <!-- icon -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>STT LETS</title>
 </head>
 
@@ -38,10 +33,10 @@
                             <td>
                                 <ul class="menu">
                                     <li class="item"><a href="../">Beranda</a></li>
-                                    <li class="item"><a href="../html/tentang_kami.php">Tentang Kami</a></li>
+                                    <li class="item"><a href="./html/tentang_kami.php">Tentang Kami</a></li>
                                     <li class="item"><a href="../html/informasi.php">Informasi</a></li>
                                     <li class="item"><a href="">Galeri</a></li>
-                                    <li class="item"><a href="../html/kontak.html">Kontak</a></li>
+                                    <li class="item"><a href="./html/kontak.html">Kontak</a></li>
                                 </ul>
                             </td>
                         </tr>
@@ -50,47 +45,29 @@
             </tr>
         </table>
 
-        <!-- ACADEMIC LEADER -->
-        <div class="leader">
-            <img src="../img/head.png" alt="">
-            <div class="content">
-                <p>Kekayaan suatu bangsa bukanlah sumber daya alamnya, tetapi manusianya. Manusia yang kaya bukanlah
-                    mereka yang hanya memiliki kepintaran atau karunia tetapi mereka yang memiliki panggilan, karakter
-                    dan kompetensi. Di tengah globalisasi yang dipenuhi dengan filosofi humanis dan relativisme umat
-                    Tuhan ditantang untuk membuktikan philosophy kerajaan Allah di atas semuanya.
-                    </br>
-                    </br>
-                    STT LETS siap untuk melahirkan pemimpin yang akan memberi jawaban menghadapi tantangan di akhir
-                    zaman.</p>
-                <h3>Dr. Ir. Rachmat T Manullang, M.Si</h3>
-                <p>Ketua STT LETS</p>
-            </div>
-        </div>
+    <!-- PROGRAM -->
+    <div class="program">
+        <?php
+        include './db.php';
 
-        <!-- PROGRAM -->
-        <div class="program">
-            <h2 class="title">Program Studi</h2>
-            <div class="content">
-                <div class="card">
-                    <a href="../php/program.php?program_level=S1">
-                        <img src="../img/s1.png" alt="">
-                        <div class="card-text"><a href="">SARJANA</a></div>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="../php/program.php?program_level=S2">
-                        <img src="../img/s2.png" alt="">
-                        <div class="card-text"><a href="">MAGISTER</a></div>
-                    </a>
-                </div>
-                <div class="card">
-                    <a href="../php/program.php?program_level=S3">
-                        <img src="../img/s3.png" alt="">
-                        <div class="card-text"><a href="">DOKTORAL</a></div>
-                    </a>
-                </div>
-            </div>
-        </div>
+        $program_level = $_GET['program_level'];
+        $sql = "SELECT * FROM program WHERE program_level='$program_level'";
+        $result = $connection->query($sql);
+
+        while ($row = $result->fetch_assoc()) {
+            echo "<h1>Program Studi ".$row['program_level']." ".$row['program_name']."</h1>";
+            
+            echo "<p> <img src='../img/program/" . $row['program_picture'] . "' alt=''/>".nl2br(htmlentities($row['program_description'], ENT_QUOTES, 'UTF-8'))."</p>";
+            echo "<h2>Visi</h2>";
+            echo "<p>".nl2br(htmlentities($row['program_vision'], ENT_QUOTES, 'UTF-8'))."</p>";
+            echo "<h2>Misi</h2>";
+            echo "<p>".nl2br(htmlentities($row['program_mission'], ENT_QUOTES, 'UTF-8'))."</p>";
+            echo "<div class='button-container'>";
+            echo "<a target='_target' href='/new/document/".$row['program_document']."/'>Download Silabus & Kurikulum</a>";
+            echo "</div>";
+        }
+        ?>
+    </div>
 
     </div>
 
