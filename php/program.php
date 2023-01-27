@@ -63,7 +63,7 @@
             echo "<h2>Misi</h2>";
             echo "<p>".nl2br(htmlentities($row['program_mission'], ENT_QUOTES, 'UTF-8'))."</p>";
             echo "<div class='button-container'>";
-            echo "<a target='_target' href='/new/document/".$row['program_document']."/'>Download Silabus & Kurikulum</a>";
+            echo "<a target='_target' href='/new/document/".$row['program_document']."'>Download Silabus & Kurikulum</a>";
             echo "</div>";
         }
         ?>
