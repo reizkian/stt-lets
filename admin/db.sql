@@ -16,4 +16,4 @@ INSERT INTO head(head_name, head_role, head_message, file_name) VALUES ("Rachmat
 
 
 -- PROGRAM
-CREATE TABLE program(id int not null auto_increment primary key, program_level varchar(50), program_name varchar(100), program_description LONGTEXT, program_picture varchar(50), program_document varchar(50));
+CREATE TABLE program(id int not null auto_increment primary key, program_level varchar(50), program_name varchar(100), program_description LONGTEXT, program_vision LONGTEXT, program_mission LONGTEXT, program_picture varchar(50), program_document varchar(50));
