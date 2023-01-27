@@ -10,12 +10,9 @@
     <!-- css -->
     <link rel="stylesheet" href="../css/tentang_kami.css">
     <!-- fonst -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
     <!-- icon -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>STT LETS</title>
 </head>
 
@@ -67,7 +64,7 @@
                     Tristique nulla aliquet enim tortor at. Proin sagittis nisl rhoncus mattis rhoncus urna. Venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Morbi tristique senectus et netus et malesuada fames. Consectetur adipiscing elit duis tristique sollicitudin nibh. Odio pellentesque diam volutpat commodo sed egestas egestas fringilla. Viverra vitae congue eu consequat ac felis.
                     </br>
                     </br>
-                    Risus viverra adipiscing at in tellus integer feugiat. Sed arcu non odio euismod lacinia. Congue mauris rhoncus aenean vel elit. Velit ut tortor pretium viverra suspendisse potenti nullam. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Amet volutpat consequat mauris nunc congue nisi vitae. Morbi tincidunt augue interdum velit euismod. 
+                    Risus viverra adipiscing at in tellus integer feugiat. Sed arcu non odio euismod lacinia. Congue mauris rhoncus aenean vel elit. Velit ut tortor pretium viverra suspendisse potenti nullam. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Amet volutpat consequat mauris nunc congue nisi vitae. Morbi tincidunt augue interdum velit euismod.
                 </p>
             </div>
         </div>
@@ -101,10 +98,10 @@
                 $result = $connection->query($sql);
                 while ($row = $result->fetch_assoc()) {
                     echo "<div class='card'>";
-                    echo "<img src='../img/staff/".$row['file_name']."' alt=''>";
-                    echo "<h3>".$row['staff_name']."</h3>";
-                    echo "<p>".$row['staff_role']."</p>";
-                    echo "<p>".$row['email']."</p>";
+                    echo "<img src='../img/staff/" . $row['file_name'] . "' alt=''>";
+                    echo "<h3>" . $row['staff_name'] . "</h3>";
+                    echo "<p>" . $row['staff_role'] . "</p>";
+                    echo "<p>" . $row['email'] . "</p>";
                     echo "</div>";
                     echo "</a>";
                 }
@@ -142,22 +139,22 @@
             <div class="nav">
                 <h3 class="title">STT LETS</h3>
                 <ul class="menu">
-                    <li class="item"><a href="./index.html">Beranda</a></li>
-                    <li class="item"><a href="./tentang_kami.php">Tentang Kami</a></li>
-                    <li class="item"><a href="./informasi.php">Informasi</a></li>
+                    <li class="item"><a href="../">Beranda</a></li>
+                    <li class="item"><a href="../html/tentang_kami.php">Tentang Kami</a></li>
+                    <li class="item"><a href="../html/informasi.php">Informasi</a></li>
                     <li class="item"><a href="">Galeri</a></li>
-                    <li class="item"><a href="">Kontak</a></li>
+                    <li class="item"><a href="../html/kontak.html">Kontak</a></li>
                 </ul>
             </div>
             <div class="account">
                 <h3 class="title">Media Sosial</h3>
                 <div class="each-account">
                     <img src="../img/icon_fb.png" alt="">
-                    <a href="">STT LEST</a>
+                    <a target="_blank" href="https://www.facebook.com/stt.lets">STT LEST</a>
                 </div>
                 <div class="each-account">
                     <img src="../img/icon_ig.png" alt="">
-                    <a href="">@sttlest</a>
+                    <a target="_blank" href="https://www.instagram.com/stt_lets/">@sttlest</a>
                 </div>
             </div>
             <div class="address">

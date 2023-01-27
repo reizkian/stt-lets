@@ -32,11 +32,11 @@
                         <tr>
                             <td>
                                 <ul class="menu">
-                                    <li class="item"><a href="../">Beranda</a></li>
-                                    <li class="item"><a href="./html/tentang_kami.php">Tentang Kami</a></li>
+                                <li class="item"><a href="../">Beranda</a></li>
+                                    <li class="item"><a href="../html/tentang_kami.php">Tentang Kami</a></li>
                                     <li class="item"><a href="../html/informasi.php">Informasi</a></li>
                                     <li class="item"><a href="">Galeri</a></li>
-                                    <li class="item"><a href="./html/kontak.html">Kontak</a></li>
+                                    <li class="item"><a href="../html/kontak.html">Kontak</a></li>
                                 </ul>
                             </td>
                         </tr>
@@ -45,29 +45,29 @@
             </tr>
         </table>
 
-    <!-- PROGRAM -->
-    <div class="program">
-        <?php
-        include './db.php';
+        <!-- PROGRAM -->
+        <div class="program">
+            <?php
+            include './db.php';
 
-        $program_level = $_GET['program_level'];
-        $sql = "SELECT * FROM program WHERE program_level='$program_level'";
-        $result = $connection->query($sql);
+            $program_level = $_GET['program_level'];
+            $sql = "SELECT * FROM program WHERE program_level='$program_level'";
+            $result = $connection->query($sql);
 
-        while ($row = $result->fetch_assoc()) {
-            echo "<h1>Program Studi ".$row['program_level']." ".$row['program_name']."</h1>";
-            
-            echo "<p> <img src='../img/program/" . $row['program_picture'] . "' alt=''/>".nl2br(htmlentities($row['program_description'], ENT_QUOTES, 'UTF-8'))."</p>";
-            echo "<h2>Visi</h2>";
-            echo "<p>".nl2br(htmlentities($row['program_vision'], ENT_QUOTES, 'UTF-8'))."</p>";
-            echo "<h2>Misi</h2>";
-            echo "<p>".nl2br(htmlentities($row['program_mission'], ENT_QUOTES, 'UTF-8'))."</p>";
-            echo "<div class='button-container'>";
-            echo "<a target='_target' href='/new/document/".$row['program_document']."'>Download Silabus & Kurikulum</a>";
-            echo "</div>";
-        }
-        ?>
-    </div>
+            while ($row = $result->fetch_assoc()) {
+                echo "<h1>Program Studi " . $row['program_level'] . " " . $row['program_name'] . "</h1>";
+
+                echo "<p> <img src='../img/program/" . $row['program_picture'] . "' alt=''/>" . nl2br(htmlentities($row['program_description'], ENT_QUOTES, 'UTF-8')) . "</p>";
+                echo "<h2>Visi</h2>";
+                echo "<p>" . nl2br(htmlentities($row['program_vision'], ENT_QUOTES, 'UTF-8')) . "</p>";
+                echo "<h2>Misi</h2>";
+                echo "<p>" . nl2br(htmlentities($row['program_mission'], ENT_QUOTES, 'UTF-8')) . "</p>";
+                echo "<div class='button-container'>";
+                echo "<a target='_target' href='/new/document/" . $row['program_document'] . "'>Download Silabus & Kurikulum</a>";
+                echo "</div>";
+            }
+            ?>
+        </div>
 
     </div>
 
@@ -77,22 +77,22 @@
             <div class="nav">
                 <h3 class="title">STT LETS</h3>
                 <ul class="menu">
-                    <li class="item"><a href="./index.html">Beranda</a></li>
-                    <li class="item"><a href="./tentang_kami.php">Tentang Kami</a></li>
-                    <li class="item"><a href="./informasi.php">Informasi</a></li>
+                    <li class="item"><a href="../">Beranda</a></li>
+                    <li class="item"><a href="../html/tentang_kami.php">Tentang Kami</a></li>
+                    <li class="item"><a href="../html/informasi.php">Informasi</a></li>
                     <li class="item"><a href="">Galeri</a></li>
-                    <li class="item"><a href="">Kontak</a></li>
+                    <li class="item"><a href="../html/kontak.html">Kontak</a></li>
                 </ul>
             </div>
             <div class="account">
                 <h3 class="title">Media Sosial</h3>
                 <div class="each-account">
                     <img src="../img/icon_fb.png" alt="">
-                    <a href="">STT LEST</a>
+                    <a target="_blank" href="https://www.facebook.com/stt.lets">STT LEST</a>
                 </div>
                 <div class="each-account">
                     <img src="../img/icon_ig.png" alt="">
-                    <a href="">@sttlest</a>
+                    <a target="_blank" href="https://www.instagram.com/stt_lets/">@sttlest</a>
                 </div>
             </div>
             <div class="address">

@@ -77,7 +77,7 @@
                 echo "<h3>" . $row['title'] . "</h3>";
                 echo "<span>" . $row['created'] . "</span>";
                 echo "<p class='content'>" . str_trim($row['content'], 300) . "</p>";
-                echo "<a href='../php/news.php?id=".$row['id']."'>selengkapnya</a>";
+                echo "<a href='../php/news.php?id=" . $row['id'] . "'>selengkapnya</a>";
                 echo "</div>";
                 echo "</div>";
             }
@@ -91,22 +91,22 @@
             <div class="nav">
                 <h3 class="title">STT LETS</h3>
                 <ul class="menu">
-                    <li class="item"><a href="./index.html">Beranda</a></li>
-                    <li class="item"><a href="./tentang_kami.php">Tentang Kami</a></li>
-                    <li class="item"><a href="./informasi.php">Informasi</a></li>
+                    <li class="item"><a href="../">Beranda</a></li>
+                    <li class="item"><a href="../html/tentang_kami.php">Tentang Kami</a></li>
+                    <li class="item"><a href="../html/informasi.php">Informasi</a></li>
                     <li class="item"><a href="">Galeri</a></li>
-                    <li class="item"><a href="">Kontak</a></li>
+                    <li class="item"><a href="../html/kontak.html">Kontak</a></li>
                 </ul>
             </div>
             <div class="account">
                 <h3 class="title">Media Sosial</h3>
                 <div class="each-account">
                     <img src="../img/icon_fb.png" alt="">
-                    <a href="">STT LEST</a>
+                    <a target="_blank" href="https://www.facebook.com/stt.lets">STT LEST</a>
                 </div>
                 <div class="each-account">
                     <img src="../img/icon_ig.png" alt="">
-                    <a href="">@sttlest</a>
+                    <a target="_blank" href="https://www.instagram.com/stt_lets/">@sttlest</a>
                 </div>
             </div>
             <div class="address">
