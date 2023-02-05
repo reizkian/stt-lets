@@ -17,6 +17,11 @@ if ($result->num_rows > 0) {
         echo "<button type='submit'>save</button>";
         echo "</form>";
     }
+} else {
+    echo "<form method='POST' action='/new/admin/view/home/create_registerurl.php'>";
+    echo "<input type='text' name='content' id='content' required>";
+    echo "<button type='submit'>save</button>";
+    echo "</form>";
 }
 
 $connection->close();
