@@ -83,14 +83,15 @@
             <img src="./img/education0.png" alt="">
             <div class="content">
                 <h2>Pendidikan</h2>
-                <p>
-                    <?php
-                    include './php/db.php';
-                    include './php/home.php';
-                    readEducationText($connection);
-                    ?>
-                </p>
+                <?php
+                include './php/db.php';
+                include './php/home.php';
+                readEducationText($connection);
+                ?>
                 <a href="./html/pendidikan.html">SELENGKAPNYA</a>
+                <?php
+                    readRegistrationURL($connection);
+                ?>
             </div>
         </div>
 

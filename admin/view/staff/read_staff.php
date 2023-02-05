@@ -12,7 +12,7 @@ while($row = $result->fetch_assoc()){
     echo "<h3 class='staff-name'>" . $row['data_order']."# " .$row['staff_name'] . "</h3>";
     echo "<p>" . $row['staff_role']. "</p>";
     echo "<p>" . $row['email']. "</p>";
-    echo "<p class='subject'>Mata Kuliah</p>";
+    echo $row['staff_position'] == "Dosen" ? "<p class='subject'>Mata Kuliah</p>" : "";
     echo "<p class='staff-subject'>" . $row['staff_subject']. "</p>";
     echo "<a class='update' btn btn-primary href='/new/admin/view/staff/open_staff.php?id=" . $row['id'] . "'role='button'>update</a>";
     echo "<a class='delete' btn btn-primary href='/new/admin/view/staff/delete_staff.php?id=" . $row['id'] . "'role='button'>delete</a>";

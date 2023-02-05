@@ -189,6 +189,15 @@ img {
     transition: all 500ms ease;
     font-size: 1vw;
 }
+
+.education .content .register{
+    color: black;
+    background-color: white;
+    border: solid 1px black;
+    box-shadow: none;
+    margin-left: 1.5vw;
+}
+
 .education .content a:hover{
     box-shadow: none;
 }

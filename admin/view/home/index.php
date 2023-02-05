@@ -8,8 +8,7 @@
 
   <title>Admin STT LETS</title>
   <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link href="../../css/sidebar.css" rel="stylesheet">
   <link href="./home.css" rel="stylesheet">
 </head>
@@ -27,7 +26,7 @@
       <span class="title fs-5">STT LETS</span>
     </a>
     <hr>
-    <ul class="nav nav-pills flex-column mb-auto" >
+    <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
         <a href="/new/admin/view/home/" class="nav-link active" style="background-color: #388FA3;">
           Home
@@ -54,8 +53,7 @@
     </ul>
     <hr>
     <div class="dropdown">
-      <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
-        data-bs-toggle="dropdown" aria-expanded="false">
+      <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
         <img src="../../../img/user0.png" alt="" width="32" height="32" class="rounded-circle me-2">
         <strong>web admin</strong>
       </a>
@@ -112,15 +110,17 @@
         <hr>
       </div>
       <div class="education-text">
-        <p><span>#EducationText</span> varchar(1000)</p>
-        <?php include './read_education.php';?>
+        <?php 
+          echo "<p><span>#Registration URL</span> varchar(1000)</p>";
+          include './read_registerurl.php'; 
+          echo "<p><span>#Education Text</span> varchar(1000)</p>";
+          include './read_education.php';
+        ?>
       </div>
     </div>
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   <script src="../js/sidebar.js"></script>
 </body>
 

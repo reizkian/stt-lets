@@ -9,8 +9,19 @@ function readEducationText($connection)
 
     if ($result->num_rows > 0) {
         if ($row["identifier"] == "education-text") {
-            echo $row['content'];
+            echo "<p>" . $row['content'] . "</p>";
         }
+    }
+}
+
+function readRegistrationURL($connection)
+{
+    $sql = "SELECT * FROM home WHERE identifier='registration-url'";
+    $result = $connection->query($sql);
+    $row = $result->fetch_assoc();
+
+    if ($result->num_rows > 0) {
+        echo "<a class='register' target='_bank' href='" . $row['content'] . "'>PENDAFTARAN</a>";
     }
 }
 
@@ -36,15 +47,14 @@ function readInformation($connection)
     $result = $connection->query($sql);
 
     while ($row = $result->fetch_assoc()) {
-        echo "<a href=./php/news.php?id=".$row['id'].">";
+        echo "<a href=./php/news.php?id=" . $row['id'] . ">";
         echo "<div class='card'>";
-        echo "<img src='./img/news/".$row['file_name']."' alt=''>";
-        echo "<h3>".$row['title']."</h3>";
-        echo "<p class='news-date'>".$row['created']."</p>";
-        echo "<p class='news-text'>".str_trim($row['content'], 100)."</p>";
+        echo "<img src='./img/news/" . $row['file_name'] . "' alt=''>";
+        echo "<h3>" . $row['title'] . "</h3>";
+        echo "<p class='news-date'>" . $row['created'] . "</p>";
+        echo "<p class='news-text'>" . str_trim($row['content'], 100) . "</p>";
         echo "</div>";
         echo "</a>";
     }
     $connection->close();
 }
-

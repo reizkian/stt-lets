@@ -61,7 +61,7 @@
                         echo "<h3>" . $row['staff_name'] . "</h3>";
                         echo "<p>" . $row['staff_role'] . "</p>";
                         echo "<p>" . $row['email'] . "</p>";
-                        echo "<p class='subject'>Mata Kuliah</p>";
+                        echo $row['staff_position'] == "Dosen" ? "<p class='subject'>Mata Kuliah</p>" : "";
                         echo "<p class='staff-subject'>" . $row['staff_subject'] . "</p>";
                     echo "</div>";
                 echo "</div>";

@@ -103,6 +103,12 @@
             echo "<label for='role'>Role</label>";
             echo "<input type='text' name='role' id='role' value='" . $row['staff_role'] . "' required>";
 
+            echo "<label for='role'>Position</label>";
+            echo "<select id='position' name='position'>";
+            echo $row['staff_position'] == "Dosen" ? "<option selected value='Dosen'>Dosen</option>" : "<option value='Dosen'>Dosen</option>";
+            echo $row['staff_position'] == "Staff" ? "<option selected value='Staff'>Staff</option>" : "<option value='Staff'>Staff</option>";
+            echo "</select>";
+
             echo "<label for='email'>Email</label>";
             echo "<input type='text' name='email' id='email' value='" . $row['email'] . "' required>";
 
