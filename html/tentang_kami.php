@@ -53,18 +53,30 @@
             <div class="content">
                 <h2>Sejarah</h2>
                 <p>
-                    Fusce ut placerat orci nulla pellentesque dignissim enim. Egestas integer eget aliquet nibh praesent
-                    tristique magna sit. Leo a diam sollicitudin tempor id eu. Sit amet mattis vulputate enim nulla
-                    aliquet porttitor lacus. Diam vulputate ut pharetra sit amet aliquam. Adipiscing diam donec
-                    adipiscing tristique. Ipsum consequat nisl vel pretium lectus quam id. Dignissim enim sit amet
-                    venenatis urna cursus eget. Lorem ipsum dolor sit amet. Duis at consectetur lorem donec massa
-                    sapien. Id nibh tortor id aliquet lectus proin nibh nisl.
-                    </br>
-                    </br>
-                    Tristique nulla aliquet enim tortor at. Proin sagittis nisl rhoncus mattis rhoncus urna. Venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Morbi tristique senectus et netus et malesuada fames. Consectetur adipiscing elit duis tristique sollicitudin nibh. Odio pellentesque diam volutpat commodo sed egestas egestas fringilla. Viverra vitae congue eu consequat ac felis.
-                    </br>
-                    </br>
-                    Risus viverra adipiscing at in tellus integer feugiat. Sed arcu non odio euismod lacinia. Congue mauris rhoncus aenean vel elit. Velit ut tortor pretium viverra suspendisse potenti nullam. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Amet volutpat consequat mauris nunc congue nisi vitae. Morbi tincidunt augue interdum velit euismod.
+                    Para pemimpin juga melihat kebutuhan akan pemimpin masa depan yang berkarakter dan berintegritas serta memiliki wawasan kesatuan dan memiliki panggilan spesifik sesuai dengan karunia jawatan yang Tuhan sudah tetapkan. STT LETS banyak mengalami peningkatan. Khususnya Kualitas pendidikan sejak tahun 1991 sampai dengan sekarang. Tahun 2012 STT LETS dipindahkan dari Yayasan Kasih Bapa menjadi Yayasan Transformasi Membangun Indonesia (2013).
+                </p>
+                <br>
+                <p>
+                    Pada Tahun 2023 YTMI telah melakukan pergantian pengurus yang baru yaitu :
+                </p>
+                <p>
+                    Pembina YTMI : Dr. Jakoep Ezra, D.B.A, Ph.D
+                </p>
+                <p>
+                    Ketua YTMI : Firman Schrijver, M.Th, CBC, CLS
+                </p>
+                <p>
+                    Bendahara YTMI: Nanny Wihardjo S.H., M.M., M.B.A., M.Th
+                </p>
+                <p>
+                    Ketua STT LETS Dr. Ir. Rachmat T Manullang, M.Si
+                </p>
+                <p>
+                    Pjs Ketua STT LETS Dr. Antonius Natan, M.Th
+                </p>
+                <br>
+                <p>
+                STT LETS mengusung slogan “Sekolah Bagi Para Pembaharu” dengan harapan dapat melahirkan mahasiswa/i yang menjadi pembaharu dimanapun berada serta membawa kemajuan dalam segala aspek kehidupan. Logo Mercusuar dipilih karena sesuai dengan harapan dan visi Tuhan yaitu, agar terang anak-anakNya bercahaya, setiap orang dapat melihat perbuatan Tuhan yang baik dan memuliakan Bapa di Sorga. (Matius 5:16).
                 </p>
             </div>
         </div>
@@ -72,16 +84,17 @@
         <!-- VISION -->
         <div class="vision">
             <h2>Visi</h2>
-            <p>Menjadi institusi yang efisien, produktif, dan unggul dalam pengembangan bidang ilmu pendidikan teologia, pendidikan agama Kristen dan kepemimpinan untuk konteks masyarakat rural dan urban dengan mengintegrasikan iman Kristiani, ilmu pengetahuan dan teknologi.</p>
+            <p>Menjadi institusi pendidikan Teologi berbasis karakter yang menghasilkan pembaharu secara holistik untuk mewujudkan generasi emas.</p>
         </div>
 
         <!-- MISSION -->
         <div class="mission">
             <h2>Misi</h2>
             <ol>
-                <li>Menyelenggarakan pendidikan dan pengajaran yang berkualitas untuk menghasilkan pemimpin dan hamba Tuhan yang mempunyai karakter yang bertanggung jawab dan dapat di percaya, keunggulan akademik, dan memiliki kemampuan dalam kepemimpinan Kristen untuk membangun dan mengembangkan gereja yang sehat dan membawa perubahan dalam komunitas.</li>
-                <li>Menyelenggarakan penelitian dan kajian yang berorientasi pada pengembangan ilmu teologi, pendidikan agama Kristen, dan kepemimpinan Kristen berdasarkan kebenaran Firman Tuhan.</li>
-                <li>Mendarmabaktikan keahlian dan kemamampuan untuk mengembangkan pendidikan teologi, pendidikan agama Kristen, dan kepemimpinan dengan memberitakan iman Kristiani dan kebenaran Firman Tuhan di gereja dan masyarakat sehingga dapat memberikan kontribusi pada peningkatan kualitas kehidupan yang lebih baik.</li>
+                <li>Menyelenggarakan pendidikan berkualitas yang menghasilkan Pemimpin dan Hamba Tuhan berkarakter, berkompetensi serta menjadi pembaharu.</li>
+                <li>Menyelenggarakan penelitian dan kajian yang relevan serta berorientasi pada pengembangan ilmu teologi, pendidikan agama Kristen dan kepemimpinan.</li>
+                <li>Mendarmabaktikan karya nyata berdasarkan Firman Tuhan untuk menghasilkan generasi emas.</li>
+                <li>Membangun sinergi yang harmonis untuk memasuki dunia global.</li>
             </ol>
         </div>
 
@@ -89,7 +102,6 @@
         <!-- PROFESSOR -->
         <div class="professor">
             <h2>Dosen dan Staff</h2>
-            <p>Risus viverra adipiscing at in tellus integer feugiat. Sed arcu non odio euismod lacinia. Congue mauris rhoncus aenean vel elit. Velit ut tortor pretium viverra suspendisse potenti nullam. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Amet volutpat consequat </p>
             <div class="content">
                 <?php
                 include '../php/db.php';
