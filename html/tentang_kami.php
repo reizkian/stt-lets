@@ -106,7 +106,7 @@
                 <?php
                 include '../php/db.php';
 
-                $sql = "SELECT * FROM staff ORDER BY data_order LIMIT 0,3";
+                $sql = "SELECT * FROM staff ORDER BY data_order LIMIT 0,4";
                 $result = $connection->query($sql);
                 while ($row = $result->fetch_assoc()) {
                     echo "<div class='card'>";
