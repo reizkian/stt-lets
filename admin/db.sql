@@ -5,7 +5,7 @@ CREATE TABLE user(id int not null auto_increment primary key, username varchar(5
 CREATE TABLE staff(id int not null auto_increment primary key, staff_name varchar(50), staff_role varchar(50), email varchar(50), staff_subject LONGTEXT, data_order int, file_name varchar(50));
 ALTER TABLE staff ADD staff_position varchar(50);
 ALTER TABLE staff ALTER staff_position SET DEFAULT 'Dosen';
-ALTER TABLE staff ADD staff_nidn BIGINT;
+ALTER TABLE staff ADD staff_nidn varchar(50);
 
 -- HOME
 CREATE TABLE home(id int not null auto_increment primary key, identifier varchar(50), content varchar(1000));

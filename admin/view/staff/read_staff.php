@@ -10,6 +10,7 @@ while($row = $result->fetch_assoc()){
     echo "<img src='/new/img/staff/" . $row['file_name'] ."' alt=''/>";
     echo "<div class='text'>";
     echo "<h3 class='staff-name'>" . $row['data_order']."# " .$row['staff_name'] . "</h3>";
+    echo "<p>NIDN: " . $row['staff_nidn']. "</p>";
     echo "<p>" . $row['staff_role']. "</p>";
     echo "<p>" . $row['email']. "</p>";
     echo $row['staff_position'] == "Dosen" ? "<p class='subject'>Mata Kuliah</p>" : "";

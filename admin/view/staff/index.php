@@ -83,6 +83,8 @@
       <form action="/new/admin/view/staff/create_staff.php" method="POST" name="form">
         <label for="">Name</label>
         <input type="text" name="name" id="name" required>
+        <label for="nidn">NIDN</label>
+        <input type="text" name="nidn" id="nidn">
         <label for="role">Role</label>
         <input type="text" name="role" id="role" required>
         <label for="position">Position</label>

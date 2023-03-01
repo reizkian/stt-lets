@@ -59,6 +59,7 @@
                     echo "<img src='../img/staff/" . $row['file_name'] . "' alt=''>";
                     echo "<div class='text'>";
                         echo "<h3>" . $row['staff_name'] . "</h3>";
+                        echo $row['staff_position'] == "Dosen" ? "<p>NIDN: " . $row['staff_nidn'] ."</p>" : "";
                         echo "<p>" . $row['staff_role'] . "</p>";
                         echo "<p>" . $row['email'] . "</p>";
                         echo $row['staff_position'] == "Dosen" ? "<p class='subject'>Mata Kuliah</p>" : "";

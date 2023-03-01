@@ -97,8 +97,11 @@
             echo "<div class='add'>";
             echo "<form action='/new/admin/view/staff/update_staff.php?id=" . $row['id'] . "' method='POST' name='form'>";
 
-            echo "<label for='author'>Name</label>";
+            echo "<label for='name'>Name</label>";
             echo "<input type='text' name='name' id='name' value='" . $row['staff_name'] . "'required>";
+
+            echo "<label for='nidn'>NIDN</label>";
+            echo "<input type='nidn' name='nidn' id='nidn' value='" . $row['staff_nidn'] . "''>";            
 
             echo "<label for='role'>Role</label>";
             echo "<input type='text' name='role' id='role' value='" . $row['staff_role'] . "' required>";
